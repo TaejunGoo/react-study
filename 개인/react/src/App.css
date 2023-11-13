@@ -5,13 +5,24 @@
   padding: 0;
   border: 0;
 }
+.Container {
+  font-family: 'Poppins', sans-serif;  
+  line-height: 1.5;
+}
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #ececec;
+  font-size: 36px;  
+  font-weight: 700;
+}
 .container_wrapper {
   max-width: 1240px;
   margin: 0 auto;
   padding: 50px 20px 120px;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;  
-  line-height: 1.5;
+  box-sizing: border-box;  
 }
 .button_mode {
   margin-left: 10px;

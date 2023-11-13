@@ -26,22 +26,18 @@ const App = () => {
         getMovies()
     }, []);
 
-    // console.log(movies);
-    if (!movies) {
-        
-        return <div className="Container"><div className="MovieList">로딩중입니다...</div></div>
-    } else {
-        return (
-            <div className="App">
-                <div className={["Container", (isMode ? 'light' : 'dark')].join(' ')}>
+    return (
+        <div className="App">
+            {
+                loading ? (<div className="Container"><div className="loading">Loading...</div></div>) : 
+                (<div className={["Container", (isMode ? 'light' : 'dark')].join(' ')}>
                     <div className="container_wrapper">
                         <MovieList  movieList = {movies} isMode ={isMode} getData={getData} />                
                     </div>
-                </div>
-            </div>
-        );
-    }
-    
+                </div>)
+            }
+        </div>
+    )   
 
 }
 

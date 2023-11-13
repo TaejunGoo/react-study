@@ -1,0 +1,38 @@
+.MovieItem {
+    color: white;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+.MovieItem img {
+    width: 150px;
+    height: 230px;
+    flex: none;
+}
+.MovieItem h1 {
+    font-size: 1.2rem;
+    padding-right: calc(2rem + 20px);
+}
+.MovieItem h1 span {
+    font-size: 10px;
+    color: orangered;
+    margin-left: 5px;
+}
+.rating {
+    color: yellow;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.MovieItem p {
+    /* height: 200px; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-word;
+        
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical
+}

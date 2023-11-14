@@ -42,40 +42,9 @@ const reducer = (state, action) => {
     }
     return newState;
 };
-const dummyData = [
-    {
-        id: 1,
-        emotion: 1,
-        content: '오늘의 일기 1번',
-        date: 1699960194155,
-    },
-    {
-        id: 2,
-        emotion: 2,
-        content: '오늘의 일기 2번',
-        date: 1699960194156,
-    },
-    {
-        id: 3,
-        emotion: 3,
-        content: '오늘의 일기 3번',
-        date: 1699960194157,
-    },
-    {
-        id: 4,
-        emotion: 4,
-        content: '오늘의 일기 4번',
-        date: 1699960194158,
-    },
-    {
-        id: 5,
-        emotion: 5,
-        content: '오늘의 일기 5번',
-        date: 1699960194159,
-    },
-];
+
 function App() {
-    const [data, dispatch] = useReducer(reducer, dummyData);
+    const [data, dispatch] = useReducer(reducer, []);
     const dataId = useRef(0);
 
     const [emotion, setEmotion] = useState([

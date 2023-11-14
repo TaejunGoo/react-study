@@ -3,19 +3,19 @@ import MyButton from './MyButton';
 import { DiaryStateContext } from '../App';
 
 export default function DiaryItem({ item }) {
-    // const { emotion } = useContext(DiaryStateContext);
-    // const [selectedEmotionIndex, setSelectedEmotionIndex] = useState(0);
+    const { emotion } = useContext(DiaryStateContext);
+    const [selectedEmotionIndex, setSelectedEmotionIndex] = useState(0);
 
-    // useEffect(() => setSelectedEmotionIndex(item.id), []);
+    useEffect(() => setSelectedEmotionIndex(item.id), []);
 
-    // const emotionIndex = emotion.findIndex((item) => item.isSelected);
-    // const { data } = useContext(DiaryStateContext);
+    const emotionIndex = emotion.findIndex((item) => item.isSelected);
+    const { data } = useContext(DiaryStateContext);
     return (
         <>
             <li className='DiaryItem'>
                 <span className='emotion_img_wrapper'>
                     <img
-                        // src={item.emotion[emotionIndex].emotion_img}
+                        src={item.emotion[emotionIndex].emotion_img}
                         alt={item.emotion_descript}
                     />
                 </span>

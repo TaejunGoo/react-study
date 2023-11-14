@@ -1,4 +1,4 @@
-
+import React, { useEffect } from 'react';
 
 const MovieItem = ({ medium_cover_image, genres, rating, summary, title, year }) => {
 
@@ -11,6 +11,10 @@ const MovieItem = ({ medium_cover_image, genres, rating, summary, title, year })
             return 'low';
         }
     } 
+
+    useEffect(() => {
+        console.log('MovieItem 최적화')
+    })
 
     return (
         <div className="MovieItem">
@@ -30,4 +34,4 @@ const MovieItem = ({ medium_cover_image, genres, rating, summary, title, year })
     )
 }
 
-export default MovieItem;
+export default React.memo(MovieItem);

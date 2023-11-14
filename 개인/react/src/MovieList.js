@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import MovieItem from './MovieItem';
 
@@ -9,7 +9,12 @@ const ratingOptionList = [
     {value: 'oldest', name: '오래된 순'},
 ]
 
-const ControlMenu = ({ value, onChange, optionList }) => {
+const ControlMenu = React.memo(({ value, onChange, optionList }) => {
+    
+    useEffect(() => {
+        console.log('ControlMenu 최적화')
+    })
+
     return (
         <select className="ControlMenu"
             value={value}
@@ -18,7 +23,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
             {optionList.map((it, idx) => <option key={idx} value={it.value}>{it.name}</option>)}
         </select>
     )
-}
+})
 
 const MovieList = ({ movieList, isMode, getData }) => {
     const toggleHandler = () => {

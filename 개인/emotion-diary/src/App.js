@@ -29,53 +29,32 @@ const reducer = (state, action) => {
             break;
         }
         case 'REMOVE':
-            newState = state.filter((item) => item.id !== action.data.targetId);
+            newState = state.filter((item) => item.id !== action.targetId);
             break;
         case 'EDIT': {
             newState = state.map((item) =>
-                item.id === action.data.it ? { ...action.data } : it
+                item.id === action.data.id ? { ...action.data } : item
             );
             break;
         }
         default:
             return state;
     }
+    localStorage.setItem('diary', JSON.stringify(newState));
     return newState;
 };
-const dummyData = [
-    {
-        id: 1,
-        emotion: 1,
-        content: '오늘의 일기 1번',
-        date: 1699960194155,
-    },
-    {
-        id: 2,
-        emotion: 2,
-        content: '오늘의 일기 2번',
-        date: 1699960194156,
-    },
-    {
-        id: 3,
-        emotion: 3,
-        content: '오늘의 일기 3번',
-        date: 1699960194157,
-    },
-    {
-        id: 4,
-        emotion: 4,
-        content: '오늘의 일기 4번',
-        date: 1699960194158,
-    },
-    {
-        id: 5,
-        emotion: 5,
-        content: '오늘의 일기 5번',
-        date: 1699960194159,
-    },
-];
 function App() {
-    const [data, dispatch] = useReducer(reducer, dummyData);
+    const [data, dispatch] = useReducer(reducer, []);
+    useEffect(() => {
+        const localData = localStorage.getItem('diary');
+        if (localData) {
+            const diaryList = JSON.parse(localData).sort(
+                (a, b) => parseInt(b.id) - parseInt(a.id)
+            );
+            dataId.current = parseInt(diaryList[0].id) + 1;
+            dispatch({ type: 'INIT', data: diaryList });
+        }
+    }, []);
     const dataId = useRef(0);
 
     // CREATE
@@ -142,6 +121,7 @@ function App() {
                             <Route path='/' element={<Home />} />
                             <Route path='/New' element={<New />} />
                             <Route path='/Edit' element={<Edit />} />
+                            <Route path='/Edit/:id' element={<Edit />} />
                             <Route path='/Diary/:id' element={<Diary />} />
                             {/* <Route path='/Diary' element={<Diary />} /> */}
                         </Routes>

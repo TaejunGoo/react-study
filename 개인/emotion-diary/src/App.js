@@ -19,12 +19,12 @@ const reducer = (state, action) => {
       break; 
     }
     case 'REMOVE' : {
-      newState = state.filter((it)=>it.id != action.targetId);
+      newState = state.filter((it)=>it.id !== action.targetId);
       break;
     }
     case 'EDIT' : {
-      newState = state.map((it)=>
-        it.id === action.data.id ? {...action.data}: it 
+      newState = state.map((it) =>
+        it.id === action.data.id ? {...action.data} : it 
       );
       break;
     }
@@ -36,9 +36,41 @@ const reducer = (state, action) => {
 export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
 
-function App() {
-  const [data, dispatch] = useReducer(reducer, []);
+const dummyData = [
+  {
+    id:1,
+    emotion:1,
+    content:'오늘의 일기 1번',
+    date : 1699919576531,
+  },
+  {
+    id:2,
+    emotion:3,
+    content:'오늘의 일기 2번',
+    date : 1699919576536,
+  },
+  {
+    id:3,
+    emotion:4,
+    content:'오늘의 일기 3번',
+    date : 1699919576537,
+  },
+  {
+    id:4,
+    emotion:2,
+    content:'오늘의 일기 4번',
+    date : 1699919576538,
+  },
+  {
+    id:5,
+    emotion:5,
+    content:'오늘의 일기 5번',
+    date : 1699919576539,
+  },
+]
 
+function App() {
+  const [data, dispatch] = useReducer(reducer, dummyData);
   const dataId =useRef(0);
 
   // CREATE

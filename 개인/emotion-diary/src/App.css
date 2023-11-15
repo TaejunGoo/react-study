@@ -90,3 +90,29 @@ header .head_btn_right{
 header button{
     font-family: 'Nanum Pen Script', cursive;
 }
+
+/* DiaryList */
+.DiaryList .menu_wrapper{
+    margin: 20px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.DiaryList .menu_wrapper .right_col{
+    flex-grow: 1;
+}
+
+.DiaryList .menu_wrapper .right_col button{
+    width: 100%;
+}
+
+.DiaryList .ControlMenu{
+    margin-right: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ececec;
+    padding: 10px 20px;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 18px;
+    cursor: pointer;
+}

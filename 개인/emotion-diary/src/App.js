@@ -8,6 +8,7 @@ import Edit from './pages/Edit';
 import New from './pages/New';
 import Diary from './pages/Diary';
 
+
 const reducer = (state, action) => {
   let newState = [];
   switch(action.type){
@@ -23,14 +24,13 @@ const reducer = (state, action) => {
       break;
     }
     case 'EDIT' : {
-      newState = state.map((it) =>
-        it.id === action.data.id ? {...action.data} : it 
-      );
+      newState = state.map((it) => it.id === action.data.id ? {...action.data} : it);
       break;
     }
     default:
       return state;
   }  
+  return newState; // newState 리턴필수
 }
 
 export const DiaryStateContext = React.createContext();
@@ -107,7 +107,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/new' element={<New/>}/>
-              <Route path='/edit' element={<Edit/>}/>
+              <Route path='/edit/:id' element={<Edit/>}/>
               <Route path='/diary/:id' element={<Diary/>}/>
             </Routes>
           </div>

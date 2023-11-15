@@ -78,60 +78,26 @@ function App() {
     const [data, dispatch] = useReducer(reducer, dummyData);
     const dataId = useRef(0);
 
-    const [emotion, setEmotion] = useState([
-        {
-            emotion_descript: '완전 좋음',
-        },
-        {
-            emotion_descript: '좋음',
-        },
-        {
-            emotion_descript: '그럭저럭',
-        },
-        {
-            emotion_descript: '나쁨',
-        },
-        {
-            emotion_descript: '끔찍함',
-        },
-    ]);
-    useEffect(() => {
-        setEmotion((prev) =>
-            prev.map((item, index) => ({
-                ...item,
-                dataId: `emotion_${index}`,
-                emotion_id: index + 1,
-                emotion_img: `/assets/emotion${index + 1}.png`,
-                isSelected: false,
-            }))
-        );
-    }, []);
-    console.log(emotion);
-
-    // const onInit = () => {
-    //     dispatch({ type: 'INIT', data });
-    // };
-
     // CREATE
-    const onCreate = ({ date, emotion, content }) => {
+    const onCreate = (date, emotion, content) => {
         dispatch({
             type: 'CREATE',
             data: {
                 id: dataId.current,
                 date: new Date(date).getTime(),
-                emotion,
                 content,
+                emotion,
             },
         });
         dataId.current += 1;
     };
     // REMOVE
-    const onRemove = ({ targetId }) => {
+    const onRemove = (targetId) => {
         // dispatch({ type: 'REMOVE', data: { targetId: dataId.current } });
         dispatch({ type: 'REMOVE', targetId });
     };
     // EDIT
-    const onEdit = ({ targetId, date, content, emotion }) => {
+    const onEdit = (targetId, date, content, emotion) => {
         dispatch({
             type: 'EDIT',
             data: {
@@ -150,7 +116,7 @@ function App() {
     // }, []);
 
     return (
-        <DiaryStateContext.Provider value={{ data, emotion, setEmotion }}>
+        <DiaryStateContext.Provider value={data}>
             <DiaryDispatchContext.Provider
                 value={{ onCreate, onRemove, onEdit }}
             >

@@ -5,9 +5,9 @@ export default function Edit() {
     const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams();
     const id = searchParams.get('id');
-    console.log('id:', id);
+    // console.log('id:', id);
     const mode = searchParams.get('mode');
-    console.log('id:', mode);
+    // console.log('id:', mode);
 
     return (
         <div>

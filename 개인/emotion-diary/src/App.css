@@ -110,12 +110,12 @@ header button {
     display: flex;
     justify-content: space-between;
 }
-
+/* 
 .DiaryList .menu_wrapper .right_col {
     flex-grow: 1;
-}
+} */
 
-.DiaryList .menu_wrapper .right_col button {
+.DiaryList .menu_wrapper button {
     width: 100%;
 }
 

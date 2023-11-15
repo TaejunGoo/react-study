@@ -1,32 +1,48 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import MyButton from './MyButton';
-import { DiaryStateContext } from '../App';
+import { useNavigate } from 'react-router-dom';
+// import { DiaryStateContext } from '../App';
 
-export default function DiaryItem({ item }) {
-    // const { emotion } = useContext(DiaryStateContext);
-    // const [selectedEmotionIndex, setSelectedEmotionIndex] = useState(0);
+export default function DiaryItem({ id, date, content, emotion }) {
+    console.log(content);
+    // { ...item } 이렇게 받아와도 되지만 대신 갚 사용할 때 item.emotion 이런식으로 사용해야함.
+    const navigate = useNavigate();
 
-    // useEffect(() => setSelectedEmotionIndex(item.id), []);
+    const env = process.env;
+    env.PUBLIC_URL = env.PUBLIC_URL || '';
 
-    // const emotionIndex = emotion.findIndex((item) => item.isSelected);
-    // const { data } = useContext(DiaryStateContext);
+    const strDate = new Date(parseInt(date)).toLocaleDateString();
+
+    const goDetail = () => {
+        navigate(`/diary/${id}`);
+    };
+    const goEdit = () => {
+        navigate(`/edit/${id}`);
+    };
+
     return (
         <>
             <li className='DiaryItem'>
-                <span className='emotion_img_wrapper'>
+                <span
+                    className={`emotion_img_wrapper emotion_img_wrapper_${emotion}`}
+                >
                     <img
-                        // src={item.emotion[emotionIndex].emotion_img}
-                        alt={item.emotion_descript}
+                        src={
+                            process.env.PUBLIC_URL +
+                            `assets/emotion${emotion}.png`
+                        }
+                        alt={emotion.emotion_descript}
                     />
                 </span>
-                <div className='info_wrapper'>
-                    <p className='diary_date'>
-                        {new Date(item.date).toLocaleDateString('ko-KR')}
-                    </p>
-                    <p className='diary_content_preview'>{item.content}</p>
+                <div className='info_wrapper' onClick={goDetail}>
+                    <div className='diary_date'>{strDate}</div>
+                    <div className='diary_content_preview'>
+                        {content}
+                        {/* {content.slice(0, 25)} */}
+                    </div>
                 </div>
                 <div className='btn_wrapper'>
-                    <MyButton text={'수정하기'} />
+                    <MyButton text={'수정하기'} onClick={goEdit} />
                 </div>
             </li>
         </>

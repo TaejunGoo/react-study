@@ -3,13 +3,10 @@ import MyButton from './MyButton';
 import { useNavigate } from 'react-router-dom';
 // import { DiaryStateContext } from '../App';
 
-export default function DiaryItem({ id, date, content, emotion }) {
-    console.log(content);
+export default React.memo(function DiaryItem({ id, date, content, emotion }) {
+    // console.log(content);
     // { ...item } 이렇게 받아와도 되지만 대신 갚 사용할 때 item.emotion 이런식으로 사용해야함.
     const navigate = useNavigate();
-
-    const env = process.env;
-    env.PUBLIC_URL = env.PUBLIC_URL || '';
 
     const strDate = new Date(parseInt(date)).toLocaleDateString();
 
@@ -47,4 +44,4 @@ export default function DiaryItem({ id, date, content, emotion }) {
             </li>
         </>
     );
-}
+});

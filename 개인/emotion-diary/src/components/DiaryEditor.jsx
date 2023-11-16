@@ -1,44 +1,18 @@
-import React, { useState, useRef, useContext, useEffect } from 'react';
+import React, {
+    useState,
+    useRef,
+    useContext,
+    useEffect,
+    useCallback,
+} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { DiaryDispatchContext } from './../App';
 
 import MyHeader from '../components/MyHeader';
 import MyButton from '../components/MyButton';
+import { EmotionList } from '../util/EmotionList';
 import EmotionItem from '../components/EmotionItem';
-
-const env = process.env;
-env.PUBLIC_URL = env.PUBLIC_URL || '';
-
-const emotionList = [
-    {
-        emotion_id: 1,
-        emotion_img: process.env.PUBLIC_URL + `/assets/emotion1.png`,
-        emotion_descript: '완전 좋음',
-    },
-    {
-        emotion_id: 2,
-        emotion_img: process.env.PUBLIC_URL + `/assets/emotion2.png`,
-        emotion_descript: '좋음',
-    },
-    {
-        emotion_id: 3,
-        emotion_img: process.env.PUBLIC_URL + `/assets/emotion3.png`,
-        emotion_descript: '그럭저럭',
-    },
-    {
-        emotion_id: 4,
-        emotion_img: process.env.PUBLIC_URL + `/assets/emotion4.png`,
-        emotion_descript: '나쁨',
-    },
-    {
-        emotion_id: 5,
-        emotion_img: process.env.PUBLIC_URL + `/assets/emotion5.png`,
-        emotion_descript: '끔찍함',
-    },
-];
-const getStringDate = (date) => {
-    return date.toISOString().slice(0, 10);
-};
+import { getStringDate } from '../util/date';
 
 export default function DiaryEditor({ isEdit, originData }) {
     const contentRef = useRef();
@@ -48,9 +22,9 @@ export default function DiaryEditor({ isEdit, originData }) {
 
     const { onCreate, onEdit, onRemove } = useContext(DiaryDispatchContext);
 
-    const handleClickEmote = (emotion) => {
+    const handleClickEmote = useCallback((emotion) => {
         setEmotion(emotion);
-    };
+    }, []);
 
     const navigate = useNavigate();
 
@@ -127,7 +101,7 @@ export default function DiaryEditor({ isEdit, originData }) {
                 <section>
                     <h4>오늘의 감정</h4>
                     <div className='input_box emotion_list_wrapper'>
-                        {emotionList.map((item) => (
+                        {EmotionList.map((item) => (
                             <EmotionItem
                                 key={item.emotion_id}
                                 {...item}

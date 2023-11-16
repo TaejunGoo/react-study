@@ -1,6 +1,11 @@
 import React from 'react';
 
-export default function ControlMenu({ value, onChange, optionList }) {
+export default React.memo(function ControlMenu({
+    value,
+    onChange,
+    optionList,
+}) {
+    console.log('constrolMenu');
     return (
         <select
             className='ControlMenu'
@@ -14,4 +19,4 @@ export default function ControlMenu({ value, onChange, optionList }) {
             ))}
         </select>
     );
-}
+});

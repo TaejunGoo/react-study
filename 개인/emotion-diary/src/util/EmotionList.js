@@ -1,4 +1,3 @@
-import React from 'react';
 const env = process.env;
 env.PUBLIC_URL = env.PUBLIC_URL || '';
 

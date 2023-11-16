@@ -2,17 +2,12 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import RouterTest from './components/RouterTest';
 import Home from './pages/Home';
-import New from './pages/New';
 import Edit from './pages/Edit';
 import Diary from './pages/Diary';
-import MyButton from './components/MyButton';
-import MyHeader from './components/MyHeader';
 import React, {
     // useEffect,
     useReducer,
     useRef,
-    useMemo,
-    useState,
     useEffect,
 } from 'react';
 
@@ -121,7 +116,6 @@ function App() {
 
                         <Routes>
                             <Route path='/' element={<Home />} />
-                            <Route path='/New' element={<New />} />
                             <Route path='/Edit' element={<Edit />} />
                             <Route path='/Edit/:id' element={<Edit />} />
                             <Route path='/Diary/:id' element={<Diary />} />

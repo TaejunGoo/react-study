@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import MyHeader from '../components/MyHeader';
 import MyButton from '../components/MyButton';
-import EmotionItem from '../components/EmotionItem';
 import { DiaryStateContext } from '../App';
 import { EmotionList } from '../util/EmotionList';
 import { getStringDate } from '../util/date';
@@ -24,7 +23,7 @@ export default function Diary() {
                 navigate('/', { replace: true });
             }
         }
-    }, [id, diaryList]);
+    }, [id, diaryList, navigate]);
 
     const goEdit = () => {
         navigate(`/edit/${id}`);

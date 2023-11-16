@@ -21,7 +21,7 @@ export default function Edit() {
                 navigate('/', { replace: true });
             }
         }
-    }, [id, diaryList]);
+    }, [id, diaryList, navigate]);
     return (
         <>
             {originData && (

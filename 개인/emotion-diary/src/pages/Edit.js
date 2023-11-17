@@ -1,25 +1,35 @@
-import { useContext } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 
-import { DiaryDispatchContext } from './../App';
+import { DiaryStateContext} from './../App';
 
 import DiaryEditor from '../components/DiaryEditor';
-import MyButton from '../components/MyButton';
-import MyHeader from '../components/MyHeader';
 
-const Edit = () =>{
+const Edit = () => {
+    const [originData, setOriginData] = useState();
     const navigate = useNavigate();
-    const [searchParams, setSearchParams] = useSearchParams();
-    const id = searchParams.get('id');
-    const { onRemove } = useContext(DiaryDispatchContext);
+    const {id} = useParams();
+
+    const diaryList = useContext(DiaryStateContext);
+
+    //해당 리스트 꺼내오기
+    useEffect(()=>{
+        if(diaryList.length >= 1){
+            // 페이지 이동한 id의 정보 빼오기
+            const targetDiary = diaryList.find((it)=>parseInt(it.id)===parseInt(id));
+            // 잘못접근하면 false 뱉음
+            if(targetDiary){
+                setOriginData(targetDiary);
+            }else{
+                alert('없는 일기입니다.')
+                navigate('/',{replace:true}) //잘못접근 했을때 홈으로가고, 뒤로가기 못하도록                
+            }
+        }
+    },[id,diaryList,navigate])
+
     return (
         <div>
-            <MyHeader 
-            headText={'일기 수정하기'}
-            leftChild={<MyButton text={'< 뒤로가기'} onClick={()=>{navigate(-1)}}/>}
-            rightChild={<MyButton type={'negative'} text={'삭제하기'} onClick={onRemove(id)}/>}
-            />
-            <DiaryEditor/>
+            {originData && <DiaryEditor isEdit={true} originData={originData}/>}
         </div>
     )
 }

@@ -7,13 +7,15 @@ import MyHeader from './../components/MyHeader';
 import MyButton from '../components/MyButton';
 
 import { getStringDate } from './../util/date';
-import {emotionList} from './../util/emotion';
 
 const Diary = () => {
   const [data, setData] = useState();
   const navigate = useNavigate();
   const { id } = useParams();
   const diaryList = useContext(DiaryStateContext);
+  
+  const env = process.env;
+  env.PUBLIC_URL = env.PUBLIC_URL || "";
 
   useEffect(() => {
     if (diaryList.length >= 1) {
@@ -29,16 +31,41 @@ const Diary = () => {
         //일기가 없음
         alert('없는 일기입니다.');
         navigate('/', { replace: true }); //잘못접근 했을때 홈으로가고, 뒤로가기 못하도록
-      }     
+      }
     }
-  }, [id, diaryList, navigate]);
+  }, [id, diaryList]);
+
+  // 이건 diaryemotion에 있는 데이터니까 그걸 util에 옮겨서사용
+  // 이렇게 추가 선언 해주지 않아도 된다
+  const emotionResult = (data) => {
+    let emotionTxt = '';
+    switch(parseInt(data.emotion)){
+      case 1 :
+        emotionTxt = '아주 좋음';
+        break;
+      case 2 :
+        emotionTxt = '좋음';
+        break;
+      case 3 :
+        emotionTxt = '그럭 저럭';
+        break;
+      case 4 :
+        emotionTxt = '나쁨';
+        break;
+      case 5 :
+        emotionTxt = '아주 나쁨';
+        break;
+      default: 
+        return;
+    }
+    return emotionTxt;
+  }
 
   if (!data) {
     return <div className='DiaryPage'>로딩중입니다...</div>;
   } else {
-    const curEmotionData = emotionList.find((it)=>parseInt(it.emotion_id) === parseInt(data.emotion));
     return (
-      <div className='DiaryPage'>
+      <div>
         <MyHeader
           headText={`${getStringDate(new Date(parseInt(data.date)))}의 기록`}
           leftChild={
@@ -51,21 +78,23 @@ const Diary = () => {
           }
           rightChild={<MyButton text={'수정하기'} onClick={() => navigate(`/edit/${data.id}`)} />}
         />
-        <article>
-          <section>
+        <div>
+          <div>
             <h4>오늘의 감정</h4>
-            <div className={['diary_img_wrapper',`diary_img_wrapper_${curEmotionData.emotion_id}`].join(' ')}>
-              <img src={curEmotionData.emotion_img} alt=''/>
-              <span className='emotion_descript'>{curEmotionData.emotion_descript}</span>
+            <div>
+              <div>
+                <img src={`${process.env.PUBLIC_URL}/assets/emotion${data.emotion}.png`} alt=''/>
+              </div>
+              <span>{emotionResult(data)}</span>
             </div>
-          </section>
-          <section>
+          </div>
+          <div>
             <h4>오늘의 일기</h4>
-            <div className='diary_content_wrapper'>
+            <div>
               <p>{data.content}</p>
             </div>
-          </section>
-        </article>
+          </div>
+        </div>
       </div>
     );
   }

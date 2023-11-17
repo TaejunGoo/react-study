@@ -1,4 +1,4 @@
-import { useRef, useState, useContext, useEffect } from 'react';
+import { useRef, useState, useContext, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { DiaryDispatchContext } from './../App';
@@ -18,9 +18,11 @@ const DiaryEditor = ({isEdit, originData}) => {
 
     const { onCreate, onEdit, onRemove } = useContext(DiaryDispatchContext);
 
-    const handleClickEmote = (emotion) => {
+    // 상태 변화 함수만 실행되기때문에 요정도만 해두됨
+    const handleClickEmote = useCallback((emotion) => {
         setEmotion(emotion)
-    }
+    }, [])
+
     const navigate = useNavigate();
     
     const handleSubmit = () => {

@@ -12,6 +12,12 @@ const Home = () => {
   const [curDate, setCurDate] = useState(new Date());
   const headText = `${curDate.getFullYear()}년 ${curDate.getMonth() + 1}월`;
 
+  // 페이지 타이틀바꿔보기
+  useEffect(()=>{
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML= `지히의 감정일기장`
+  },[]);
+
   useEffect(() => {
     if (diaryList.length >= 1) {
       const firstDay = new Date(

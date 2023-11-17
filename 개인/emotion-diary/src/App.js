@@ -49,10 +49,11 @@ function App() {
         (a,b)=>parseInt(b.id)-parseInt(a.id)
       );
 
-      // 제일큰 id값에 +1
-      dataId.current = parseInt(diaryList[0].id) + 1;
-
-      dispatch({type:"INIT", data: diaryList})
+      if(diaryList.length >= 1){
+        // 제일큰 id값에 +1
+        dataId.current = parseInt(diaryList[0].id) + 1;
+        dispatch({type:"INIT", data: diaryList})
+      }
     }
   },[])
 

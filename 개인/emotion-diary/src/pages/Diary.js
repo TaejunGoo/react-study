@@ -15,6 +15,12 @@ const Diary = () => {
   const { id } = useParams();
   const diaryList = useContext(DiaryStateContext);
 
+  // 페이지 타이틀바꿔보기
+  useEffect(()=>{
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML= `감정일기장 ${id}번 일기`
+  },[]);
+
   useEffect(() => {
     if (diaryList.length >= 1) {
       // 페이지 이동한 id의 정보 빼오기

@@ -4,6 +4,11 @@ import DiaryEditor from '../components/DiaryEditor';
 import { DiaryStateContext } from '../App';
 
 export default function Edit() {
+    useEffect(() => {
+        const titleElement = document.getElementsByTagName('title')[0];
+        titleElement.innerHTML = `EMOTION DIARY - ${id}번 일기 수정`;
+    });
+
     const [originData, setOriginData] = useState();
     const navigate = useNavigate();
     const { id } = useParams();

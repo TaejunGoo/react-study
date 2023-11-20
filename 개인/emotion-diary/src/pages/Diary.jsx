@@ -7,6 +7,11 @@ import { EmotionList } from '../util/EmotionList';
 import { getStringDate } from '../util/date';
 
 export default function Diary() {
+    useEffect(() => {
+        const titleElement = document.getElementsByTagName('title')[0];
+        titleElement.innerHTML = `EMOTION DIARY - ${id}번 일기`;
+    });
+
     const { id } = useParams();
     const diaryList = useContext(DiaryStateContext);
     const navigate = useNavigate();

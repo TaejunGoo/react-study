@@ -5,6 +5,10 @@ import DiaryList from '../components/DiaryList';
 import { DiaryStateContext } from '../App';
 
 export default function Home() {
+    useEffect(() => {
+        const titleElement = document.getElementsByTagName('title')[0];
+        titleElement.innerHTML = `EMOTION DIARY`;
+    });
     const diaryList = useContext(DiaryStateContext);
     const [data, setData] = useState([]);
     const [curDate, setCurDate] = useState(new Date());

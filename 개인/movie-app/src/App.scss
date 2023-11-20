@@ -1,0 +1,220 @@
+/* MyHeader */
+.MyHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: rgb(1, 1, 84);
+    .app_name {
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    button {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #fff;
+
+        .user_img {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin-right: 5px;
+        }
+    }
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* Toggle */
+.Toggle {
+    label {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    [type="checkbox"] {
+        appearance: none;
+        position: relative;
+        border: 1px solid gray;
+        border-radius: 22px;
+        width: 44px;
+        height: 22px;
+    }
+
+    [type="checkbox"]::before {
+        content: "";
+        position: absolute;
+        left: calc(100% - 22px);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        transform: scale(0.8);
+        background-color: gray;
+        transition: left 0.2s linear;
+    }
+
+    [type="checkbox"]:checked {
+        background-color: tomato;
+        border-color: tomato;
+    }
+
+    [type="checkbox"]:checked::before {
+        background-color: white;
+        left: 2px;
+    }
+
+    [type="checkbox"]:disabled {
+        border-color: lightgray;
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    [type="checkbox"]:disabled:before {
+        background-color: lightgray;
+    }
+
+    [type="checkbox"]:disabled+span {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+}
+
+/* Select */
+.Select {}
+
+.Select select {
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+
+/* MoveList */
+.MoveList {}
+
+.MoveList_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+    padding: 10px;
+
+    &-big{
+        .ListItem{
+            width: 100%;
+        }
+    }
+}
+
+/* ListItem */
+.ListItem {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 20px)/3);
+    cursor: pointer;
+    
+    .item_thumb {
+        padding-bottom: 56.25%;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .item_info {      
+        flex-grow: 1;  
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        .movie_name{
+            font-size: 24px;
+            font-weight: bold;
+            flex-grow: 1;
+        }
+
+        .movie_rating{
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.badges{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    .badge{
+        padding: 5px;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: -0.05px;
+        &-comedy{
+            background: rgb(0, 93, 0);
+        }
+        &-romance{
+            background: rgb(246, 151, 166);
+        }
+        &-drama{
+            background: rgb(97, 18, 171);
+        }
+        &-action{
+            background: rgb(156, 2, 2);
+        }
+        &-horror{
+            background: rgb(64, 64, 64);
+        }
+        &-mystery{
+            background: rgb(42, 0, 0);
+        }
+        &-thriller{
+            background: rgb(0, 0, 0);
+        }
+        &-crime{
+            background: rgb(0, 0, 0);
+        }
+        &-adventure{
+            background: rgb(104, 171, 4);
+        }
+        &-animation{
+            background: rgb(104, 171, 4);
+        }
+        &-family{
+            background: rgb(251, 173, 29);
+        }
+        &-fantasy{
+            background: rgb(251, 173, 29);
+        }
+        &-music{
+            background: rgb(21, 21, 168);
+        }
+        &-documentary{
+            background: #aaa
+        }
+        &-history{
+            background: #aaa
+        }
+    }
+    
+}

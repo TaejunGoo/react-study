@@ -1,13 +1,15 @@
 import React from 'react';
 
-const Select = () => {
+const Select = ({optionList, sortChange}) => {
+    
     return (
     <div className='Select'>
-        <select>
-            <option>최신 개봉순</option>
-            <option>과거 개봉순</option>
-            <option>최고 별점순</option>
-            <option>최저 별점순</option>
+        <select onChange={(e)=>{sortChange(e.target.value)}}>
+            {
+                optionList.map((el, idx)=>(
+                    <option key={`selectOption-${idx}`} value={el.value}>{el.name}</option>
+                ))
+            }
         </select>
     </div>
     )

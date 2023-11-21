@@ -1,4 +1,4 @@
-const itemList = [{
+export const itemList = [{
         "idx": 0,
         "bandType": "BANNER_MAIN",
         "items": [{
@@ -580,4 +580,4 @@ const itemList = [{
             }
         ]
     }
-]
+];

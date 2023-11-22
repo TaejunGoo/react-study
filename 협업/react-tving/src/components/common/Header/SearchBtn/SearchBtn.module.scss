@@ -1,0 +1,22 @@
+.searchBtn{
+    width: 2.333rem;
+    height: 2.333rem;
+    background-image: url('/assets/images/icon_search.svg');
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-position: center;
+    background-position: center;
+    opacity: 0.7;
+    font-size: 1rem;
+    text-indent: -9999px;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+    &:hover{
+        opacity: 1;
+    }
+    &.close{
+        background-image: url('/assets/images/icon_x.svg');
+        background-size: 120%;
+    }
+}

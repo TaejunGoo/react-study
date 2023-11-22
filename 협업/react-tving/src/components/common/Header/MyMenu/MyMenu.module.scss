@@ -1,0 +1,149 @@
+.myMenu{
+    .wrapper{
+        position: relative;
+        width: 2.333rem;
+        height: 2.333rem;
+        &:hover + .cont{
+            visibility: visible;
+            opacity: 1;
+            transform: translate(0,0);
+            transition: visibility 0s linear 0s,opacity 0.2s,transform 0.2s;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: -1em;
+            left: -1em;
+            right: -1em;
+            bottom: -1em;
+            background-color: transparent;
+            z-index: -1;
+        }
+    }
+    .profile_img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        &::before{
+            content: '';
+            position: absolute;
+            top: -1em;
+            left: -1em;
+            right: -1em;
+            bottom: -1em;
+            background-color: transparent;
+            z-index: -1;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .cont{
+        position: fixed;
+        top: 5.833rem;
+        right: 3.888rem;
+        min-width: 20rem;
+        box-sizing: border-box;
+        margin-top: -2px;
+        padding: 1.5rem 0 1.167rem;
+        opacity: 1;
+        border-radius: 2px;
+        box-shadow: 0px 5px 10px 0 rgba(0,0,0,0.5);
+        border: solid 1px #4d4d4d;
+        background-color: #212121;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 0.2s,opacity 0.2s,transform 0.2s;
+        transform: translate(0,-10px);
+        &::before{
+            content: '';
+            position: absolute;
+            top: -1em;
+            left: -1em;
+            right: -1em;
+            bottom: -1em;
+            background-color: transparent;
+            z-index: -1;
+        }
+        &:hover{
+            visibility: visible;
+            opacity: 1;
+            transform: translate(0,0);
+            transition: visibility 0s linear 0s,opacity 0.2s,transform 0.2s;
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            padding: 0 1.667rem;
+            .img{
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 4px;
+                overflow: hidden;
+                background-color: rgba(255,255,255,0.1);
+                img{
+                    position: relative;
+                    display: block;
+                    height: 100%;
+                }
+            }
+            .info{
+                min-width: 70%;
+                padding-left: 1.25rem;
+                .name{
+                    width: 100%;
+                    word-wrap: break-word;
+                    text-overflow: ellipsis;
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    word-break: keep-all;
+                }
+                .change{
+                    padding-top: 0.333rem;
+                    font-size: 1rem;
+                    color: #a3a3a3;
+                    transition: color 0.1s;
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        margin-left: 0.3em;
+                        width: 0.95em;
+                        height: 0.95em;
+                        transform: translate3d(0,0.1em,0);
+                        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6.2 11'%3E%3Cpath fill='%237f7f7f' d='M6 5.7L.7 11l-.7-.7 4.8-4.8L0 .7.7 0 6 5.3l.2.2-.2.2z'/%3E%3C/svg%3E");
+                        background-size: contain;
+                        background-position: 50% 0;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+        hr{
+            width: auto;
+            margin: 1.667rem 0 1.167rem;
+            border-width: 1px 0 0 0;
+            border-color: #2e2e2e;
+        }
+        .list{
+            a{
+                display: inline-block;
+                width: 100%;
+                padding: 0.5rem 1.667rem;
+                font-size: 1.25rem;
+                line-height: 1.5;
+                color: #a3a3a3;
+                transition: color 0.1s;
+                &:hover{
+                    background-color: #2e2e2e;
+                    color: rgba(255,255,255,1);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.copyrightBox{
+    font-size: 1.083rem;
+    opacity: 1;
+    padding-bottom: 1.888rem;
+    p{
+        margin-bottom: 0.55rem;
+        &>span{
+            position: relative;
+            padding: 0px 0.5rem 0px 0.75rem;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                width: 1px;
+                height: 11px;
+                margin-top: -5px;
+                background-color: rgb(46, 46, 46);
+            }
+            &:first-of-type{
+                padding-left: 0;
+                &::before{
+                    width: 0;
+                }
+            }
+            a{
+                font-size: inherit;
+                font-family: inherit;
+                color: inherit;
+                cursor: pointer;
+                text-decoration: underline;
+                transition: color 0.1s ease 0s;
+                &:hover{
+                    color: rgb(163, 163, 163);
+                }
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import styles from './MyMenu.module.scss';
 
-import defaultProfileImg from 'assets/images/profile_default.webp'
+import defaultProfileImg from 'assets/images/profile_default.webp';
 
 const MyMenu = ({profile}) => {
     const userName = profile.name;
@@ -43,6 +43,6 @@ MyMenu.defaultProps = {
         name : '',
         img : defaultProfileImg
     }
-}
+};
 
 export default React.memo(MyMenu);

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react' 
+import { useState, useEffect, useCallback } from 'react' 
 import { Link } from 'react-router-dom';
 import { throttle } from 'lodash';
 import classNames from "classnames/bind";
@@ -25,7 +25,7 @@ const Header = () => {
             } catch(error){
                 console.log('유저 프로필을 로드하지 못했습니다.');
                 throw error;
-            }
+            };
         };
         getData()
         .then(jsonResponse => {
@@ -33,7 +33,7 @@ const Header = () => {
         })
         .catch(error => {
             console.error('유저 프로필을 로드하는 중 에러가 발생했습니다:', error);
-        })
+        });
     },[]);
 
     useEffect(() => {
@@ -43,10 +43,9 @@ const Header = () => {
         window.addEventListener('scroll', handleScroll);
     },[]);
 
-    const handleLayer = () => {
+    const handleLayer = useCallback(() => {
         setIsViewLayer(!isViewLayer);
-        console.log(isViewLayer)
-    };
+    },[isViewLayer]);
 
 
     return (

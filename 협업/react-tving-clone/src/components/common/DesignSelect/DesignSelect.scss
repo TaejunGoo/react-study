@@ -1,0 +1,67 @@
+.react-select-wrap{
+    .react-select{
+        &__control{
+            cursor: pointer;
+            background-color: transparent;
+            border-style: none;
+            border-color: black;
+            box-shadow: none;
+            outline: 0px;
+            min-height: initial;
+            line-height: normal;
+        }
+        &__value-container{
+            padding: 0px;
+            .react-select__single-value{
+                color: rgb(163, 163, 163);
+                margin: 0;
+            }
+        }
+        &__placeholder{
+            cursor: pointer;
+            color: rgb(163, 163, 163);
+            margin: 0px;
+            transition: color 0.1s ease 0s;
+            white-space: nowrap;
+            &:hover{
+                color: rgb(222, 222, 222);
+                &::after{
+                    color: rgb(222, 222, 222);
+                }
+            }
+            &::after{
+                content: "+";
+                display: inline-block;
+                color: rgb(163, 163, 163);
+                margin-left: 1vw;
+            }
+        }
+        &__input-container{
+            margin: 0;
+            padding: 0;
+        }
+        &__indicators{
+            display: none;
+        }
+        &__menu{
+            width: max-content;
+            min-width: 100%;
+            background-color: #212121;
+        }
+        &__option{
+            cursor: pointer;
+            white-space: nowrap;
+            height: 40px;
+            min-height: 40px;
+            line-height: 22px;
+        }
+        &__option--is-focused{
+            background-color: #2e2e2e;
+            color: rgb(222, 222, 222);
+        }
+        &__option:active{
+            background-color: #2e2e2e;
+            color: rgb(222, 222, 222);
+        }
+    }
+}

@@ -1,5 +1,6 @@
-import styles from './SearchBtn.module.scss';
+import React from 'react';
 import classNames from 'classnames/bind';
+import styles from './SearchBtn.module.scss';
 
 const Searchbtn = ({isViewLayer, onClick}) => {
     const cx = classNames.bind(styles);
@@ -13,4 +14,4 @@ const Searchbtn = ({isViewLayer, onClick}) => {
     );
 };
 
-export default Searchbtn;
+export default React.memo(Searchbtn);

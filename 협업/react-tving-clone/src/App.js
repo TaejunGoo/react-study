@@ -1,20 +1,25 @@
-import {useEffect, useState} from 'react';
-import Slide from './component/Slide';
+import React, {useEffect, useState} from 'react';
+import MainBody from './component/MainBody';
 import './assets/css/reset.scss'
 
 import {itemList} from './utils/itemList';
 
+export const MoveStateContext = React.createContext();
+
 function App(){
-  const [moveList, setMoveList] = useState([]);
-  
-  useEffect(()=>{
-    setMoveList(itemList);
-  },[])
+  const [moveList, setMoveList] = useState(itemList);
+
+  // useEffect(()=>{
+  //   setMoveList(itemList);
+  // },[])
 
   return(
-    <div className='App'>
-      <Slide moveList={moveList}/>
-    </div>
+    <MoveStateContext.Provider value={moveList}>
+      <div className='App'>
+        <MainBody/>
+      </div>
+    </MoveStateContext.Provider>
+  
   )
 }
 

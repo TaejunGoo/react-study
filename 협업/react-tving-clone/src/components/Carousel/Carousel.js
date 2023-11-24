@@ -1,15 +1,15 @@
-import React from 'react';
-// Import Swiper React components
+import React, { useEffect, useState } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import styles from './Carousel.module.scss';
 
-export default function Carousel({ type, itemList }) {
+export default function Carousel({ type, bandName }) {
     const types = {
         main: {
             modules: [Navigation, Pagination, Scrollbar, A11y],
@@ -23,23 +23,25 @@ export default function Carousel({ type, itemList }) {
         list: {
             modules: [Navigation, Pagination, Scrollbar, A11y],
             slidesPerView: 3,
+            spaceBetween: 20,
             navigation: true,
         },
     };
 
-    const selectedType = types[type] || types.main; // Select the appropriate type
+    const selectedType = types[type] || types.main;
+
+    const [itemData, setItemData] = useState();
+    const
+    useEffect(()=> {
+        
+    },[])
 
     return (
         <div className={`${styles.Carousel} ${styles[type]}`}>
-            <Swiper
-                className={styles.Swiper}
-                {...selectedType} // Spread the selected type properties
-            >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                {/* ... */}
+            <Swiper className={styles.Swiper} {...selectedType}>
+                <SwiperSlide className={styles.SwiperSlide}>
+                    Slide 1
+                </SwiperSlide>
             </Swiper>
         </div>
     );

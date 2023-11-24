@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import HeaderStyle from "./Header.module.scss";
 
 import SearchBtn from "./SearchBtn";
-import MyBtn from "./MyBtn";
+import MyMenu from "./MyMenu";
 
 const activeStyle = {
     fontWeight: 'bold', 
@@ -13,10 +13,10 @@ const activeStyle = {
 
 const Header = () => {
     const menuItems = [
-        { id:1, label: '시리즈', path: '/A' },
-        { id:2, label: '영화', path: '/B' },
-        { id:3, label: '라이브', path: '/C' },
-        { id:4, label: '파라마운트+', path: '/D' },
+        { id:1, title: '시리즈', path: '/A' },
+        { id:2, title: '영화', path: '/B' },
+        { id:3, title: '라이브', path: '/C' },
+        { id:4, title: '파라마운트+', path: '/D' },
     ];
     
     return (
@@ -29,7 +29,7 @@ const Header = () => {
                     {menuItems.map((menuItem) => (
                         <li key={menuItem.id}>
                             <NavLink to={menuItem.path} style={({isActive}) => {return isActive ? activeStyle : undefined;}}>
-                                {menuItem.label}
+                                {menuItem.title}
                             </NavLink>
                         </li>
                     ))}
@@ -37,7 +37,7 @@ const Header = () => {
             </nav>
             <aside>
                 <SearchBtn />
-                <MyBtn />
+                <MyMenu />
             </aside>
         </header>
     );

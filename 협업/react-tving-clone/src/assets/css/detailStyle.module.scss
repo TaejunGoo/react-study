@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+.Detail {    
+    img {
+        max-width: 100%;
+        vertical-align: top;
+    }
+    min-height: 100vh;
+    background: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #FFF;        
+    .Detail_area {
+        position: relative;        
+    }
+    .detail_bg {
+        margin-top: -50px;
+        position: absolute;
+        left: -16px;
+        right: -16px;
+        top: -120px;
+        bottom: -120px;
+        overflow: hidden;
+        opacity: 0.5;
+        pointer-events: none;
+        &::after {
+            content: '';
+            background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+            position: absolute;
+            bottom: -3px;
+            left: -16px;
+            right: -16px;
+            height: 120px;
+        }
+        img {                    
+            filter: blur(30px);
+        }        
+    }
+    .Detail_inner {
+        display: flex;
+        align-items: center;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -8px;
+            right: -8px;
+            height: 1px;
+            background: rgba(255,255,255,0.18);
+        }
+    }
+    .logo {
+        max-width: 400px;
+        max-height: 100px;
+        margin: 20px 0;
+        object-fit: contain;
+    }
+    .TagList {
+        display: flex;
+        align-items: center;
+    }
+    .tag {
+        height: 24px;
+        line-height: 24px;
+        margin: 5px 5px 0 0;
+        padding: 0 6px 1px;
+        border-radius: 3px;
+        box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 1px inset;
+        font-size: 13px;
+        color: rgba(255,255,255, 0.7);
+        white-space: nowrap;
+    }
+    .tag_age {
+        width: 24px;
+        height: 24px;
+        margin: 5px 5px 0 0;
+        background-size: 24px auto;
+        background-repeat: no-repeat;
+    }
+    .tag_age_all {
+        background-image: url(https://www.tving.com/img/tag_cmmg_all.svg);
+    }
+    .tag_age_15 {
+        background-image: url(https://www.tving.com/img/tag_cptg_15.svg);
+    }
+    .tag_age_19 {
+        background-image: url(https://www.tving.com/img/tag_cptg_19.svg);
+    }
+    .Category {
+        span {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 1);            
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ff153c;
+        }
+    }
+    .detail_btn {
+        display: flex;
+        align-items: center;
+        padding: 24px 0 10px;
+        &_view {
+            margin-right: 16px;
+            padding: 17px 56px;
+            background: #FFF;
+            border-radius: 4px;
+            font-size: 17px;
+            color: #000;
+            font-weight: 700;
+            position: relative;
+        }
+        &_util {
+            display: flex;            
+        }
+    } 
+
+    .Icons {
+        display: flex;        
+        .btn_util {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70px;
+        }
+        .icon {
+            font-size: 24px;
+        }
+        .text {
+            margin-top: 4px;
+            font-size: 14px;
+            color: #FFF;
+            opacity: 0.8;
+        }
+    }
+
+    .detail_info {
+        margin-top: 10px;
+        &_item {
+            display: flex;
+            dt {
+                margin-right: 14px;
+                font-size: 14px;
+                line-height: 19px;;
+                color: #FFF;
+                white-space: nowrap;
+                opacity: 0.64;
+            }
+            dd {
+                font-size: 14px;
+                line-height: 19px;;
+                color: #FFF;
+                white-space: nowrap;
+                opacity: 0.64;
+            }
+            &_story {
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 19px;;
+                color: #FFF;
+                white-space: nowrap;
+                opacity: 0.64;
+            }
+        }
+    }
+    .detail_thumb {
+        margin-left: auto;
+        position: relative;
+        &_pc {
+            max-width: 300px;
+        }
+        &_mo {
+            display: none;
+        }
+        .Category {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }  
+
+    .Detail_related {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 80px 20px 50px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .SwiperContainer {
+        .SwiperSlide {
+            max-width: 200px;
+            width: 100%;            
+            background: gold;
+        }
+    }
+    
+}

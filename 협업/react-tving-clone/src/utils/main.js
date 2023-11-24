@@ -1,24 +1,30 @@
 import {SwiperSlide} from 'swiper/react' ;
+import classNames from 'classnames/bind';
+import MainBodyStyle from './../component/MainBody.module.scss'
+
+const cx = classNames.bind(MainBodyStyle);
+
 export const main = (listData) => {
     const key = listData.bandType;
     let returnData = {}
     switch(key){
         case "BANNER_MAIN": 
-            returnData={                
+            returnData={         
+                className : "main_slider",       
                 listTit : listData.bandName || undefined,
                 slideItem : (
-                    listData.items.map((item)=>(    
-                    <SwiperSlide>
-                        <div>
-                            <div className='banner_img'>
+                    listData.items.map((item,i)=>(    
+                    <SwiperSlide key={`item-${i}`}>
+                        <div className={cx("slide_item")}>
+                            <div className={cx("banner_img")}>
                                 <img src={item.imageUrl} alt=''/>
                             </div>
-                            <div className="disc_box">
-                                <p className='tit'>{
+                            <div className={cx("disc_box")}>
+                                <p className={cx("tit")}>{
                                     item.titleImageUrl ? <img src={item.titleImageUrl} alt=''></img> :
                                     item.title1 || item.title2
                                 }</p>
-                                <p className='desc'>
+                                <p className={cx("desc")}>
                                     {
                                         (item.description || []).map((desc, index) => (
                                             <span key={index}>{desc}</span>
@@ -33,21 +39,22 @@ export const main = (listData) => {
                 slideOptions : ({
                     navigation : true,
                     pagination : true,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }
+                    // autoplay: {
+                    //     delay: 2500,
+                    //     disableOnInteraction: false,
+                    // }
                 })
             }
             break;
         case "VOD_SPECIAL_BUTTON":
-            returnData = {                
+            returnData = {         
+                className:"button_slider",       
                 listTit : listData.bandName || undefined,
                 slideItem : (
-                    listData.items.map((item)=>(
-                        <SwiperSlide>
-                            <div>
-                                <div className='banner_img'>
+                    listData.items.map((item,i)=>(
+                        <SwiperSlide key={`item-${i}`}>
+                            <div className={cx("slide_item")}>
+                                <div className={cx("banner_img")}>
                                     <img src={item.imageUrl} alt=''/>
                                 </div>
                             </div>                        
@@ -63,12 +70,13 @@ export const main = (listData) => {
             break;
         case "VOD_BASIC_RANKING":
             returnData = {
+                className: "ranking_slider",
                 listTit : listData.bandName || undefined,
                 slideItem : (
                     listData.items.map((item, i)=>(
-                        <SwiperSlide>
-                            <div>
-                                <div className='banner_img'>
+                        <SwiperSlide key={`item-${i}`}>
+                            <div className={cx("slide_item")}>
+                                <div className={cx("banner_img")}>
                                     <img src={item.imageUrl} alt=''/>
                                 </div>
                                 <p>{i+1}</p>
@@ -85,12 +93,13 @@ export const main = (listData) => {
             break;
         default :
         returnData = {
+            className: "default_slider",
             listTit : listData.bandName || undefined,
             slideItem : (
-                listData.items.map((item)=>(
-                    <SwiperSlide>
-                        <div>
-                            <div className='banner_img'>
+                listData.items.map((item, i)=>(
+                    <SwiperSlide key={`item-${i}`}>
+                        <div className={cx("slide_item")}>
+                            <div className={cx("banner_img")}>
                                 <img src={item.imageUrl} alt=''/>
                             </div>
                         </div>                        

@@ -1,0 +1,70 @@
+$vw-viewport: 1600;
+$vw-enable: true;
+$gnb-height-num: em(80);
+$container-pt: 1.5em;
+$browser-context: 16; // Default
+
+// @import './utils/_utils.scss';
+
+// // Common Import
+// @import './common/common.scss';
+// @import './common/mixin.scss';
+
+html {
+  // @media screen and (max-width: 360px) {
+  //     font-size: 10px;
+  // }
+
+  &.hide-scrollbar {
+    overflow: scroll;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    // font-size: calc(0.8vw + 9px);
+    font-size: 12px;
+    &.is-laptop {
+      font-size: calc(6px + 0.5vw);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.2vw;
+    &.is-laptop {
+      font-size: calc(6px + 0.5vw);
+    }
+  }
+  @media screen and (min-width: 768px) and (orientation: portrait) {
+    font-size: 1.5vw;
+    &.is-laptop {
+      font-size: calc(6px + 0.5vw);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 1vw;
+    &.is-laptop {
+      font-size: calc(6px + 0.5vw);
+    }
+  }
+  @media screen and (min-width: 2000px) {
+    font-size: 16px;
+    &.is-laptop {
+      font-size: 16px;
+    }
+  }
+  @media screen and (min-width: 2400px) {
+    font-size: 18px;
+    &.is-laptop {
+      font-size: 18px;
+    }
+  }
+}
+
+img{
+    vertical-align: middle;
+}
+

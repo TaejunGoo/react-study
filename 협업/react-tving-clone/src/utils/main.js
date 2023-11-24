@@ -39,10 +39,11 @@ export const main = (listData) => {
                 slideOptions : ({
                     navigation : true,
                     pagination : true,
-                    // autoplay: {
-                    //     delay: 2500,
-                    //     disableOnInteraction: false,
-                    // }
+                    spaceBetween:10,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }
                 })
             }
             break;
@@ -63,8 +64,13 @@ export const main = (listData) => {
                 ),
                 slideOptions: ({
                     navigation : true,
-                    pagination : true,
-                    slidesPerView:3
+                    pagination :  {
+                        el: '.swiper-pagination', 
+                        clickable: true,
+                    },
+                    slidesPerView: 5,
+                    slidesPerGroup:5,
+                    spaceBetween:10,
                 })
             }
             break;
@@ -76,10 +82,10 @@ export const main = (listData) => {
                     listData.items.map((item, i)=>(
                         <SwiperSlide key={`item-${i}`}>
                             <div className={cx("slide_item")}>
+                                <p className={cx("rank_num")}>{i+1}</p>
                                 <div className={cx("banner_img")}>
                                     <img src={item.imageUrl} alt=''/>
                                 </div>
-                                <p>{i+1}</p>
                             </div>                        
                         </SwiperSlide>
                     ))
@@ -87,7 +93,9 @@ export const main = (listData) => {
                 slideOptions: ({
                     navigation : true,
                     pagination : true,
-                    slidesPerView:4
+                    slidesPerView:5.5,
+                    slidesPerGroup:5,
+                    spaceBetween:10,
                 })
             }
             break;
@@ -109,7 +117,9 @@ export const main = (listData) => {
             slideOptions: ({
                 navigation : true,
                 pagination : true,
-                slidesPerView:4
+                slidesPerView:7,
+                slidesPerGroup:7,
+                spaceBetween:10,
             })
         };
     }

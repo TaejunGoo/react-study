@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import MainBody from './component/MainBody';
 import './assets/css/reset.scss'
+import './assets/css/global.scss'
 
 import {itemList} from './utils/itemList';
 

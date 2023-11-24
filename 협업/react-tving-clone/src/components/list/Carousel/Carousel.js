@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import styles from './Carousel.module.scss';
 
-export default function Carousel({ type, bandName }) {
+export default function Carousel({ type, bandData }) {
     const types = {
         main: {
             modules: [Navigation, Pagination, Scrollbar, A11y],
@@ -30,18 +30,25 @@ export default function Carousel({ type, bandName }) {
 
     const selectedType = types[type] || types.main;
 
-    const [itemData, setItemData] = useState();
-    const
-    useEffect(()=> {
-        
-    },[])
+    // useEffect(()=> {
+
+    // },[])
+    if (!bandData) {
+        return console.log(11);
+    }
 
     return (
         <div className={`${styles.Carousel} ${styles[type]}`}>
             <Swiper className={styles.Swiper} {...selectedType}>
-                <SwiperSlide className={styles.SwiperSlide}>
-                    Slide 1
-                </SwiperSlide>
+                {bandData.map((item, idx) => (
+                    <SwiperSlide key={item.code} className={styles.SwiperSlide}>
+                        <div>
+                            <img src={item.imageUrl} alt={item.title} />
+                            <h3>{item.title}</h3>
+                            {/* Render other properties as needed */}
+                        </div>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );

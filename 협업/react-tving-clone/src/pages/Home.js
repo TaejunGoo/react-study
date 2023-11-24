@@ -5,6 +5,7 @@ import Footer from 'components/common/Footer/Footer';
 import { Link } from 'react-router-dom';
 import Carousel from 'components/Carousel/Carousel';
 import { BandListProvider } from 'context/BandListContext';
+import CarouselList from 'components/list/CarouselList';
 
 const Home = () => {
     return (
@@ -33,12 +34,12 @@ const Home = () => {
                         >
                             콩콩팥팥
                         </Link>
-                        <Carousel
-                            type={'main'}
+                        <CarouselList
+                            type={'list'}
                             bandName={'오늘의 티빙 TOP10'}
                         />
-                        <Carousel type={'list'} />
-                        <Carousel />
+                        <CarouselList type={'list'} />
+                        <CarouselList bandName={'오늘의 티빙 TOP10'} />
                         <p style={{ fontSize: 500 }}>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Obcaecati quaerat sapiente et similique aut

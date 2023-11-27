@@ -7,6 +7,7 @@ import styles from './Header.module.scss';
 import Gnb from './Gnb/Gnb';
 import MyMenu from './MyMenu/MyMenu';
 import Searchbtn from './SearchBtn/SearchBtn';
+import SearchLayer from './SearchLayer/SearchLayer';
 
 import logoImg from 'assets/images/logo.svg';
 
@@ -47,20 +48,30 @@ const Header = () => {
         setIsViewLayer(!isViewLayer);
     },[isViewLayer]);
 
+    useEffect(() => {
+        const body = document.getElementsByTagName('body')[0];
+        isViewLayer? body.style.overflowY = "hidden" : body.style = "";
+    },[isViewLayer]);
+
 
     return (
-        <header className={cx('header', {'top' : isTop})}>
-            <Link to={'/'} className={styles.logo}>
-                <div className={styles.wrapper}>
-                    <img src={logoImg} alt="티빙" />
-                </div>
-            </Link>
-            <Gnb />
-            <aside>
-                <Searchbtn isViewLayer={isViewLayer} onClick={handleLayer}/>
-                <MyMenu profile={userProfile} />
-            </aside>
-        </header>
+        <>
+            <header className={cx('header', {'top' : isTop, 'onLayer' : isViewLayer})}>
+                <Link to={'/'} className={styles.logo}>
+                    <div className={styles.wrapper}>
+                        <img src={logoImg} alt="티빙" />
+                    </div>
+                </Link>
+                <Gnb />
+                <aside>
+                    <Searchbtn isViewLayer={isViewLayer} onClick={handleLayer}/>
+                    <MyMenu profile={userProfile} />
+                </aside>
+            </header>
+            {
+                isViewLayer && <SearchLayer />
+            }
+        </>
     )
 };
 

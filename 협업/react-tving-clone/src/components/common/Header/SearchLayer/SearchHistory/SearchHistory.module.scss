@@ -1,0 +1,63 @@
+.searchHistory{
+    .title{
+        color: rgb(222, 222, 222);
+        line-height: 2.1;
+        font-size: 1.667rem;
+        font-weight: bold;
+        margin-bottom: 1.667rem;
+        .btn_deleteAll{
+            margin-left: 1.174em;
+            font-size: 1.175rem;
+            font-weight: 400;
+            color: gray;
+            vertical-align: .175em;
+            line-height: normal;
+            .icon{
+                margin-left: .5em;
+                width: 1.175em;
+                height: 1.175em;
+                display: inline-block;
+                background-image: url(/assets/images/icon_x_circle.svg);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: contain;
+                line-height: normal;
+                font-size: 1rem;
+                text-indent: -9999px;
+            }
+        }
+    }
+    .item{
+        margin: .75rem 0;
+        font-size: 1.335rem;
+        font-weight: 400;
+        color: hsla(0,0%,87%,.7);
+        transition: color .1s;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        .btn_keyword{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            font-size: inherit;
+            font-weight: inherit;
+            color: inherit;
+        }
+        .btn_delete{
+            margin-left: 1rem;
+            min-width: 1rem;
+            min-height: 1rem;
+            background-image: url(/assets/images/icon_x.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            opacity: 0.7;
+            line-height: normal;
+            font-size: 1rem;
+            text-indent: -9999px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    }
+}

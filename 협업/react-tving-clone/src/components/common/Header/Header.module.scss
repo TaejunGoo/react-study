@@ -44,6 +44,9 @@
         backdrop-filter: blur(30px);
         background-color: rgba(0, 0, 0, 0.7);
     }
+    &.onLayer::before{
+        display: none;
+    }
     .logo{
         display: flex;
         align-items: center;

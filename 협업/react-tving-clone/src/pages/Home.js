@@ -5,7 +5,7 @@ import Footer from "components/common/Footer/Footer";
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Header />
             <MainContainer>
                 <ContentContainer>
@@ -13,7 +13,7 @@ const Home = () => {
                 </ContentContainer>
             </MainContainer>
             <Footer />
-        </div>
+        </>
     );
 };
 

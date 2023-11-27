@@ -1,0 +1,34 @@
+.searchRank{
+    .title{
+        color: rgb(222, 222, 222);
+        line-height: 2.1;
+        font-size: 1.667rem;
+        font-weight: bold;
+        margin-bottom: 1.667rem;
+    }
+    .item{
+        margin: .75rem 0;
+        font-size: 1.335rem;
+        font-weight: 400;
+        color: hsla(0,0%,87%,.7);
+        transition: color .1s;
+        line-height: 1.5;
+        button{
+            display: flex;
+            align-items: center;
+            color: rgb(163, 163, 163);
+            transition: color 0.1s ease 0s;
+            .rank{
+                width: 2.5rem;
+                font-size: 1.333rem;
+                display: inline-block;
+                color: rgb(255, 21, 60);
+            }
+            .item_title{
+                cursor: pointer;
+                font-size: 1.333rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

@@ -113,7 +113,7 @@ const SearchLayer = () => {
         }else{
             alert('검색어를 입력 해 주세요');
         };
-    },[]);
+    },[historyData]);
     const onRemove = useCallback((keyword) => {
         dispatch({type:'REMOVE', data: {
             keyword: keyword
@@ -125,7 +125,7 @@ const SearchLayer = () => {
 
     const dispatches = useMemo(() => {
         return {onAdd, onRemove, onRemoveAll};
-    },[]);
+    },[onAdd, onRemove, onRemoveAll]);
 
     return (
         <div className={styles.searchLayer}>

@@ -1,0 +1,215 @@
+/* swiper custom */
+.content_wrap{
+    section{
+        padding: 1.333rem 4rem;
+    }
+}
+
+.slider{    
+    .swiper{    
+        overflow: visible;
+        margin: 0 -4rem;
+        padding: 0 4rem;
+        transition: 0.5s;
+    
+        &-pagination{            
+            display: flex;
+            align-items: center;
+            width: auto;
+            left: auto;
+            bottom: auto;
+            top: -1.5rem;
+            right: 4rem;
+            visibility: hidden;
+        }
+
+        &-pagination-bullet{
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0 4px;
+            &-active{
+                background: rgb(255, 255, 255);
+            }
+        }
+
+        &-button-prev, &-button-next{
+            width: 3.888rem;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 50% 50%;
+            top: 0;
+            left: auto;
+            right: auto;
+            margin: 0;
+            visibility: hidden;
+
+            &::after{
+                display: none;
+            }
+        }
+
+        &-button-prev{
+            background-image: url(./../assets/images/icon_slide_left.svg);
+            left: 0;
+        }
+
+        &-button-next{
+            background-image: url(./../assets/images/icon_slide_right.svg);
+            right: 0;
+        }        
+
+        &:hover{
+            .swiper{                
+                &-pagination{
+                    visibility: visible;
+                }
+
+                &-button-prev, &-button-next{
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+.slider_tit{
+    font-size: 1.666rem;
+    font-weight: 700;
+    margin-bottom: 0.666rem;
+}
+
+.slide_item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    transform: translateY(0);
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover{
+        transform: translateY(-0.6rem);
+    }
+
+    .label{
+        display: inline-flex;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-weight: 900;
+        position: absolute;
+
+        &-lt{
+            left: 2px;
+            top: 2px;
+        }
+
+        &-rt{
+            right: 2px;
+            top: 2px;
+        }
+
+        &-ct{
+            width: 100%;
+            justify-content: center;
+            bottom: 2px;
+        }
+
+        &-main{
+            position: static;
+            padding: 0;
+            font-size: 20px;
+        }
+    }
+}
+
+.main_slider{
+    padding: 0 4rem !important;
+    .banner_img{
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .slide_item{
+        &:hover{
+            transform: translateY(0);
+        }
+    }
+
+    .disc_box{        
+        position: absolute;
+        z-index: 1;
+        width: 31.667rem;
+        left: 2.67rem;
+        bottom: 2.66rem;
+
+        .tit{
+            font-weight: 700;
+            font-size: 3.5rem;
+            img{
+                object-fit: contain;
+            }
+        }
+        .desc{
+            font-size: 1.5rem;
+            margin-top: 1.33rem;
+            span{
+                display: block;
+            }
+        }
+    }   
+
+    .swiper{
+        &-pagination{            
+            justify-content: end;
+            top: auto;
+            bottom: 2.333rem;
+            right: 7rem;
+        }
+
+        &-pagination-bullet{
+            width: 0.667rem;
+            height: 0.667rem;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0.3333rem;
+            &-active{
+                background: rgb(255, 255, 255);
+            }
+        }
+    }
+}
+
+.button_slider{
+    margin-top: 1.33rem;
+    
+    .slide_item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #262626;
+        padding: 1.5rem 0;
+
+        img{
+            width: auto;
+            height: 4.5rem;
+        }
+    }
+}
+
+.ranking_slider{
+    .rank_num{
+        width: 5rem;
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: red;
+    }
+
+    .banner_img{
+        border-radius: 4px;
+        overflow: hidden;
+    }
+}
+

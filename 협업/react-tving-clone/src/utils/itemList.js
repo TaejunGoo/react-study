@@ -579,5 +579,60 @@ export const itemList = [{
                 "label": {}
             }
         ]
+    },
+    {
+        "idx": 5,
+        "bandType": "BANNER_LINE",
+        "bandName": "티빙페스타2023",
+        "items": [{
+            "title": "",
+            "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/02/1698913951_1.jpg",
+            "linkUrl": "https://bit.ly/46SoJwl",
+            "bannerCode": "BN0106"
+        }]
+    },
+    {
+        "idx": 6,
+        "bandType": "VOD_BASIC_CONTENT",
+        "bandName": "운수 오진 날",
+        "items": [{
+                "code": "P001746510",
+                "title": "운수 오진 날",
+                "imageUrl": "https://image.tving.com/ntgs/operation/curation/2023/11/14/1699939321_1.jpg",
+                "label": {
+                    "isOriginal": true
+                }
+            },
+            {
+                "code": "P001746510",
+                "title": "운수 오진 날",
+                "imageUrl": "https://image.tving.com/ntgs/operation/curation/2023/11/14/1699939321_2.jpg"
+            },
+            {
+                "code": "P001746510",
+                "title": "운수 오진 날",
+                "imageUrl": "https://image.tving.com/ntgs/operation/curation/2023/11/14/1699939321_3.jpg"
+            },
+            {
+                "code": "P001746510",
+                "title": "운수 오진 날",
+                "imageUrl": "https://image.tving.com/ntgs/operation/curation/2023/11/14/1699939321_4.jpg"
+            },
+            {
+                "code": "P001746510",
+                "title": "운수 오진 날",
+                "imageUrl": "https://image.tving.com/ntgs/operation/curation/2023/11/14/1699939321_5.jpg"
+            },
+            {
+                "code": "P001746510",
+                "title": "운수 오진 날",
+                "imageUrl": "https://image.tving.com/ntgs/operation/curation/2023/11/14/1699939321_6.jpg"
+            },
+            {
+                "code": "P001746510",
+                "title": "운수 오진 날",
+                "imageUrl": "https://image.tving.com/ntgs/operation/curation/2023/11/14/1699939321_7.jpg"
+            }
+        ]
     }
 ];

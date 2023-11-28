@@ -1,8 +1,6 @@
-import {SwiperSlide} from 'swiper/react' ;
-import classNames from 'classnames/bind';
-import MainBodyStyle from './../component/MainBody.module.scss'
-
-const cx = classNames.bind(MainBodyStyle);
+import { keyboard } from '@testing-library/user-event/dist/keyboard';
+import SlideItem from './../component/slider/SlideItem'
+import {SwiperSlide} from 'swiper/react';
 
 export const main = (listData) => {
     const key = listData.bandType;
@@ -15,24 +13,13 @@ export const main = (listData) => {
                 slideItem : (
                     listData.items.map((item,i)=>(    
                     <SwiperSlide key={`item-${i}`}>
-                        <div className={cx("slide_item")}>
-                            <div className={cx("banner_img")}>
+                        <SlideItem slideItem={item} isMain={true}/>
+                        {/* <div className={"slide_item"}>
+                            <div className={"banner_img"}>
                                 <img src={item.imageUrl} alt=''/>
                             </div>
-                            <div className={cx("disc_box")}>
-                                <p className={cx("tit")}>{
-                                    item.titleImageUrl ? <img src={item.titleImageUrl} alt=''></img> :
-                                    item.title1 || item.title2
-                                }</p>
-                                <p className={cx("desc")}>
-                                    {
-                                        (item.description || []).map((desc, index) => (
-                                            <span key={index}>{desc}</span>
-                                        ))
-                                    }
-                                </p>
-                            </div>
-                        </div>                    
+                            
+                        </div>                     */}
                     </SwiperSlide>
                     ))                    
                 ),
@@ -54,11 +41,7 @@ export const main = (listData) => {
                 slideItem : (
                     listData.items.map((item,i)=>(
                         <SwiperSlide key={`item-${i}`}>
-                            <div className={cx("slide_item")}>
-                                <div className={cx("banner_img")}>
-                                    <img src={item.imageUrl} alt=''/>
-                                </div>
-                            </div>                        
+                            <SlideItem slideItem={item}/>
                         </SwiperSlide>
                     ))
                 ),
@@ -81,12 +64,7 @@ export const main = (listData) => {
                 slideItem : (
                     listData.items.map((item, i)=>(
                         <SwiperSlide key={`item-${i}`}>
-                            <div className={cx("slide_item")}>
-                                <p className={cx("rank_num")}>{i+1}</p>
-                                <div className={cx("banner_img")}>
-                                    <img src={item.imageUrl} alt=''/>
-                                </div>
-                            </div>                        
+                            <SlideItem slideItem={item} isRank={true} slideIdx={i}/>
                         </SwiperSlide>
                     ))
                 ),
@@ -99,6 +77,23 @@ export const main = (listData) => {
                 })
             }
             break;
+        case "BANNER_LINE":
+            returnData = {
+                className: "banner_line",
+                listTit : undefined,
+                slideItem : (
+                    listData.items.map((item, i)=>(
+                        <SwiperSlide key={`item-${i}`}>
+                            <SlideItem slideItem={item}/>
+                        </SwiperSlide>
+                    ))
+                ),
+                slideOptions: ({
+                    spaceBetween:10,
+                })
+            }
+            break;
+        
         default :
         returnData = {
             className: "default_slider",
@@ -106,11 +101,7 @@ export const main = (listData) => {
             slideItem : (
                 listData.items.map((item, i)=>(
                     <SwiperSlide key={`item-${i}`}>
-                        <div className={cx("slide_item")}>
-                            <div className={cx("banner_img")}>
-                                <img src={item.imageUrl} alt=''/>
-                            </div>
-                        </div>                        
+                        <SlideItem slideItem={item}/>
                     </SwiperSlide>
                 ))
             ),

@@ -3,23 +3,17 @@ import { MoveStateContext } from './../App';
 import Slider from './slider/Slider'
 
 import {main} from './../utils/main';
-
-import classNames from 'classnames/bind';
-import MainBodyStyle from './MainBody.module.scss'
-const cx = classNames.bind(MainBodyStyle);
-
-console.log(MainBodyStyle);
-
+import './MainBody.scss'
 const MainBody = () => {    
     const moveList = useContext(MoveStateContext);
     
     return(
-        <div className={cx("content_wrap")}>
+        <div className={"content_wrap"}>
         {
             moveList.map((el,i)=>
-                <section className={cx([main(el).className])} key={`${main(el).className}-${i}`}>
+                <section className={["slider",main(el).className].join(" ")} key={`${main(el).className}-${i}`}>
                     {
-                        main(el).listTit && <p className={cx("slider_tit")}>{main(el).listTit}</p>
+                        main(el).listTit && <p className={"slider_tit"}>{main(el).listTit}</p>
                     }
                     <Slider 
                         slideItem={

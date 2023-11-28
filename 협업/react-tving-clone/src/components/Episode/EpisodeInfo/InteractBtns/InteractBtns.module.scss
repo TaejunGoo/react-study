@@ -1,0 +1,89 @@
+.interactBtns{
+    display: flex;
+    align-items: center;
+    .btn{
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        width: 5.333rem;
+        height: 5.333rem;
+        text-align: center;
+        margin: 0px;
+        opacity: 0.87;
+        transition: opacity 0.1s ease 0s;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }
+        svg{
+            width: 2.667rem;
+            height: 2.667rem;
+            margin-bottom: 0.75rem;
+        }
+        span{
+            font-size: 1.167rem;
+            font-weight: 500;
+            line-height: 0.86;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+    }
+    .wrap{
+        position: relative;
+        .layer{
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 100;
+            margin-top: -8em;
+            padding: 1.25em 1.5em 2em;
+            border-radius: 0.1em;
+            backdrop-filter: blur(50px);
+            background-color: rgba(255, 255, 255, 0.15);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 53.2% 90%, 50% 100%, 46.8% 90%, 0% 90%);
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s linear 0.2s, opacity 0.2s ease 0s, transform 0.2s ease 0s;
+            left: 50%;
+            transform: translate3d(-50%, 10%, 0px);
+            &.active{
+                visibility: visible;
+                opacity: 1;
+                transition: visibility 0s linear 0s, opacity 0.2s ease 0s, transform 0.2s ease 0s;
+                transform: perspective(1px) translate3d(-50%, 0px, 0px);
+            }
+            button{
+                position: relative;
+                opacity: 1;
+                overflow: hidden;
+                border-radius: 9900px;
+                width: 3rem;
+                height: 3rem;
+                font-size: 1rem;
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-size: 100% auto;
+                text-indent: -9999px;
+                &:nth-of-type(n+2){
+                    margin-left: 1em;
+                }
+                &.faceBook{
+                    background-image: url(/assets/images/circle-facebook.svg);
+                }
+                &.kakao{
+                    background-image: url(/assets/images/circle-kakao.svg);
+                }
+                &.twitter{
+                    background-image: url(/assets/images/circle-twitter.svg);
+                }
+                &.url{
+                    background-image: url(/assets/images/circle-url.svg);
+                }
+            }
+        }
+    }
+}

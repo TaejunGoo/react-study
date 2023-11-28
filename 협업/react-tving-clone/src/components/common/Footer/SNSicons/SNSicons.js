@@ -9,22 +9,22 @@ const SNSicons = () => {
     return (
         <div className={styles.snsIcons}>
             <div className={styles.item}>
-                <Link to={'https://www.youtube.com/c/TVING_official'}>
+                <Link target='blank' to={'https://www.youtube.com/c/TVING_official'}>
                     <YoutubeIcon />
                 </Link>
             </div>
             <div className={styles.item}>
-                <Link to={'https://www.instagram.com/tving.official/'}>
+                <Link target='blank' to={'https://www.instagram.com/tving.official/'}>
                     <InstaIcon />
                 </Link>
             </div>
             <div className={styles.item}>
-                <Link to={'https://twitter.com/tvingdotcom'}>
+                <Link target='blank' to={'https://twitter.com/tvingdotcom'}>
                     <TwitterIcon />
                 </Link>
             </div>
             <div className={styles.item}>
-                <Link to={'https://www.facebook.com/CJTVING/'}>
+                <Link target='blank' to={'https://www.facebook.com/CJTVING/'}>
                     <FacebookIcon />
                 </Link>
             </div>

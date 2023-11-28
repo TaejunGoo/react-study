@@ -1,0 +1,46 @@
+.playButton{
+    position: relative;
+    margin-right: 1.333rem;
+    padding: 1.5rem 5rem;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.89;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    backdrop-filter: blur(30px);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    transition: opacity 0.3s ease 0s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+    &:hover{
+        transform: scale(1.03);
+    }
+    svg{
+        height: 1.333rem;
+        margin-right: 1rem;
+    }
+    .progress_wrap{
+        position: relative;
+        overflow: hidden;
+        width: 5rem;
+        height: 0.333rem;
+        margin: 0px 0px 0px 1rem;
+        padding: 0px 4.167rem 0px 0px;
+        border-radius: 2px;
+        backdrop-filter: blur(50px);
+        background-color: rgba(0, 0, 0, 0.1);
+        .progress{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 0;
+            height: 100%;
+            opacity: 0.9;
+            border-radius: 2px;
+            background-color: rgb(255, 21, 60);
+        }
+    }
+}

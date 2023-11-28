@@ -8,7 +8,7 @@ const SlideItem = ({slideItem, isRank, slideIdx, isMain}) => {
             {trueTypes.length > 0 && 
                 returnLabel.map((item, i)=>{
                 return(
-                    <div className={["label",`label-${item.align}`].join(" ")} style={{"backgroundColor": item.bgColor || "transparent", "display" : isMain && "block"}} key={`label-${i}`}>{item.text.toLocaleUpperCase()}</div>
+                    <div className={["label",`label-${item.align}`].join(" ")} style={{"backgroundColor": item.bgColor || "transparent", "display" : isMain && "none"}} key={`label-${i}`}>{item.text.toLocaleUpperCase()}</div>
                 )
             })}
             {isRank && <p className={"rank_num"}>{slideIdx+1}</p> }

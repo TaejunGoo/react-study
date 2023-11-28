@@ -1,4 +1,3 @@
-import { keyboard } from '@testing-library/user-event/dist/keyboard';
 import SlideItem from './../component/slider/SlideItem'
 import {SwiperSlide} from 'swiper/react';
 

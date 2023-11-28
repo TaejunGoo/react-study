@@ -14,12 +14,6 @@ export const main = (listData) => {
                     listData.items.map((item,i)=>(    
                     <SwiperSlide key={`item-${i}`}>
                         <SlideItem slideItem={item} isMain={true}/>
-                        {/* <div className={"slide_item"}>
-                            <div className={"banner_img"}>
-                                <img src={item.imageUrl} alt=''/>
-                            </div>
-                            
-                        </div>                     */}
                     </SwiperSlide>
                     ))                    
                 ),

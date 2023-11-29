@@ -1,4 +1,4 @@
-import MainBody from './../component/MainBody'
+import MainBody from './../component/Main/MainBody'
 
 const Main = () => {
     return (

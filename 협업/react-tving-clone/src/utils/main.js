@@ -1,4 +1,4 @@
-import SlideItem from './../component/slider/SlideItem';
+import SlideItem from './../component/Slider/SlideItem'
 import {SwiperSlide} from 'swiper/react';
 
 export const main = (listData) => {

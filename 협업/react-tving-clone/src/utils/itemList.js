@@ -634,5 +634,439 @@ export const itemList = [{
                 "imageUrl": "https://image.tving.com/ntgs/operation/curation/2023/11/14/1699939321_7.jpg"
             }
         ]
+    },
+    {
+        "idx": 7,
+        "bandType": "VOD_BASIC",
+        "bandName": "실시간 인기 시리즈",
+        "moreUrl": "https://www.tving.com/more/band/HM16580",
+        "items": [{
+                "code": "P001749344",
+                "title": "스트릿댄스 걸스 파이터2",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231121/0126/P001749344.jpg",
+                "label": {
+                    "isOnly": true,
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001743596",
+                "title": "강철부대3",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231024/1555/P001743596.jpg",
+                "label": {
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001746510",
+                "title": "운수 오진 날",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1120/ko/20231124/0313/P001746510.jpg",
+                "label": {
+                    "isOriginal": true,
+                    "isGrade19": true
+                }
+            },
+            {
+                "code": "P001747179",
+                "title": "콩 심은 데 콩 나고 팥 심은 데 팥 난다",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1140/ko/20231123/0539/P001747179.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P001609758",
+                "title": "최강야구",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231024/1535/P001609758.jpg",
+                "label": {
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001746797",
+                "title": "힘쎈여자 강남순",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1140/ko/20231026/0715/P001746797.jpg",
+                "label": {
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001747227",
+                "title": "장사천재 백사장2",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231030/0115/P001747227.jpg",
+                "label": {
+                    "isOnly": true,
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001747173",
+                "title": "무인도의 디바",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1150/ko/20231123/0542/P001747173.jpg",
+                "label": {
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001747226",
+                "title": "어쩌다 사장3",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231031/0255/P001747226.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001392765",
+                "title": "벌거벗은 세계사",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231030/0130/P001392765.jpg",
+                "label": {
+                    "isOnly": true,
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001748083",
+                "title": "싱어게인3",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231026/1615/P001748083.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P001644914",
+                "title": "한문철의 블랙박스 리뷰",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20220916/P001644914.jpg",
+                "label": {
+                    "isOnly": true,
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001749353",
+                "title": "2023 MAMA AWARDS Chapter 1",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231129/0105/P001749353.jpg",
+                "label": {
+                    "isOnly": true,
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001748449",
+                "title": "완벽한 결혼의 정석",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231029/1415/P001748449.jpg",
+                "label": {
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001748082",
+                "title": "초대형 노래방 서바이벌 VS",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231027/1525/P001748082.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P000643144",
+                "title": "유 퀴즈 온 더 블럭",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231030/0505/P000643144.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P001748376",
+                "title": "낮에 뜨는 달",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231024/1010/P001748376.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000515167",
+                "title": "놀라운 토요일",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231028/1210/P000515167.jpg",
+                "label": {
+                    "isOnly": true,
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001747580",
+                "title": "뭉쳐야 찬다3",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231029/1245/P001747580.jpg",
+                "label": {
+                    "isNewEpisode": true
+                }
+            },
+            {
+                "code": "P001119239",
+                "title": "연애의 참견 NEW",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231024/1515/P001119239.jpg",
+                "label": {
+                    "isNewEpisode": true
+                }
+            }
+        ]
+    },
+    {
+        "idx": 8,
+        "bandType": "VOD_BASIC",
+        "bandName": "나영석 예능",
+        "moreUrl": "https://www.tving.com/more/curation/CR1014",
+        "items": [{
+                "code": "P001716794",
+                "title": "뿅뿅 지구오락실2",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20230505/P001716794.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P000970658",
+                "title": "삼시세끼 산촌편",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231116/0750/P000970658.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001697953",
+                "title": "서진이네",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1160/ko/20230217/P001697953.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P001747760",
+                "title": "출장 소통의 신 <서진이네 편>",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231031/0255/P001747760.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P001052050",
+                "title": "신서유기 7",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231116/0325/P001052050.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001279758",
+                "title": "여름방학",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231116/0820/P001279758.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001747179",
+                "title": "콩 심은 데 콩 나고 팥 심은 데 팥 난다",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231030/0155/P001747179.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P001596229",
+                "title": "뜻밖의 여정",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231116/0735/P001596229.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000381621",
+                "title": "신서유기 4",
+                "imageUrl": "https://image.tving.com/upload/cms/caip/CAIP0900/P000381621.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000132520",
+                "title": "꽃보다 할배 스페인",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231114/0900/P000132520.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000663161",
+                "title": "알쓸신잡 (알아두면 쓸데없는 신비한 잡학사전) 3",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231113/0435/P000663161.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001337958",
+                "title": "신서유기 8",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231116/0325/P001337958.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001516937",
+                "title": "슬기로운 산촌생활",
+                "imageUrl": "https://image.tving.com/upload/cms/caip/CAIP0900/P001516937.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001420956",
+                "title": "윤스테이",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231116/0825/P001420956.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000245108",
+                "title": "꽃보다 청춘 아프리카",
+                "imageUrl": "https://image.tving.com/upload/cms/caip/CAIP0900/P000245108.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000820455",
+                "title": "스페인 하숙",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231116/0720/P000820455.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000349638",
+                "title": "신서유기 3",
+                "imageUrl": "https://image.tving.com/upload/cms/caip/CAIP0900/P000349638.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001086739",
+                "title": "신서유기 외전: 아이슬란드 간 세끼 60분 특별판",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20191127/P001086739.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000420858",
+                "title": "신서유기 외전 강식당",
+                "imageUrl": "https://image.tving.com/upload/cms/caip/CAIP0900/P000420858.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000436161",
+                "title": "윤식당 2",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20171229/P000436161.jpg",
+                "label": {}
+            }
+        ]
+    },
+    {
+        "idx": 9,
+        "bandType": "VOD_BASIC",
+        "bandName": "추천 드라마",
+        "moreUrl": "https://www.tving.com/more/curation/CR1015",
+        "items": [{
+                "code": "P000820341",
+                "title": "사이코메트리 그녀석",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1160/ko/20190308/P000820341.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000120061",
+                "title": "응답하라 1994",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1160/ko/20131004/P000120061.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001446334",
+                "title": "시지프스",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1120/ko/20210211/P001446334.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001743591",
+                "title": "반짝이는 워터멜론",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1110/ko/20231026/0713/P001743591.jpg",
+                "label": {
+                    "isOnly": true
+                }
+            },
+            {
+                "code": "P000349790",
+                "title": "내성적인 보스",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231116/0105/P000349790.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001233848",
+                "title": "쌍갑포차",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1130/ko/20200514/P001233848.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000727339",
+                "title": "일단 뜨겁게 청소하라",
+                "imageUrl": "https://image.tving.com/upload/cms/caip/CAIP0900/P000727339.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001328141",
+                "title": "18 어게인",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1140/ko/20231102/0523/P001328141.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001527830",
+                "title": "어사와 조이",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231025/0335/P001527830.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001446329",
+                "title": "괜찮아, 사랑이야",
+                "imageUrl": "https://image.tving.com/upload/cms/caip/CAIP0900/P001446329.png",
+                "label": {}
+            },
+            {
+                "code": "P000729764",
+                "title": "알함브라 궁전의 추억",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1120/ko/20181124/P000729764.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001384342",
+                "title": "낮과밤",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1110/ko/20201127/P001384342.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000864339",
+                "title": "어비스",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1120/ko/20190503/P000864339.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001525969",
+                "title": "멜랑꼴리아",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1160/ko/20231024/0625/P001525969.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000353081",
+                "title": "내일 그대와",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1110/ko/20170127/P000353081.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001568029",
+                "title": "군검사 도베르만",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1130/ko/20220224/P001568029.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000934156",
+                "title": "WATCHER (왓쳐)",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20190629/P000934156.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000675753",
+                "title": "하늘에서 내리는 일억개의 별",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1140/ko/20180928/P000675753.jpg",
+                "label": {}
+            },
+            {
+                "code": "P000538840",
+                "title": "빠담빠담… 그와 그녀의 심장박동소리",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1120/ko/20180430/P000538840.jpg",
+                "label": {}
+            },
+            {
+                "code": "P001274557",
+                "title": "트레인",
+                "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231115/0905/P001274557.jpg",
+                "label": {}
+            }
+        ]
     }
 ];

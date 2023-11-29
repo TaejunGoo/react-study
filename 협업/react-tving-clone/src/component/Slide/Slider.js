@@ -1,5 +1,5 @@
 import { Navigation, Pagination, Scrollbar, Autoplay} from 'swiper/modules';
-import {Swiper} from 'swiper/react' ;
+import {Swiper} from 'swiper/react';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';

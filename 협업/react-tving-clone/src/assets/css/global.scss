@@ -68,3 +68,12 @@ img{
     vertical-align: middle;
 }
 
+.blind{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  z-index: -1;
+}

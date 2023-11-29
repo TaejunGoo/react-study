@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {labelType} from './../../utils/labelType';
 
@@ -39,7 +40,9 @@ const SlideItem = ({slideItem, isRank, slideIdx, isMain}) => {
             }
             <div className={"banner_img"}>
                 <img src={slideItem.imageUrl} alt=''/>
-            </div>            
+                {isMain || 
+                <span className='blind'>{slideItem.title}</span>}            
+            </div>
         </div> 
     )
 }

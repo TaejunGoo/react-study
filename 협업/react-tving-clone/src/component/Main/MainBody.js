@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { MoveStateContext } from './../App';
-import Slider from './slider/Slider'
+import { MoveStateContext } from './../../App';
+import Slider from './../Slide/Slider'
 
-import {main} from './../utils/main';
+import {main} from './../../utils/main';
 import './MainBody.scss'
 const MainBody = () => {    
     const moveList = useContext(MoveStateContext);

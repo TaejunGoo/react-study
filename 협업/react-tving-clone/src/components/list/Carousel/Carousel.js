@@ -8,10 +8,20 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import styles from './Carousel.module.scss';
+import CarouselItem from '../CarouselItem/CarouselItem';
 
 export default function Carousel({ type, bandData }) {
     const types = {
-        main: {
+        bannerMain: {
+            modules: [Navigation, Pagination, Scrollbar, A11y],
+            slidesPerView: 1,
+            navigation: true,
+            pagination: { clickable: true },
+            scrollbar: { draggable: true },
+            // onSwiper: (swiper) => console.log(swiper),
+            // onSlideChange: () => console.log('slide change'),
+        },
+        bannerSub: {
             modules: [Navigation, Pagination, Scrollbar, A11y],
             slidesPerView: 1,
             navigation: true,
@@ -20,7 +30,28 @@ export default function Carousel({ type, bandData }) {
             onSwiper: (swiper) => console.log(swiper),
             onSlideChange: () => console.log('slide change'),
         },
-        list: {
+        bannerList: {
+            modules: [Navigation, Pagination, Scrollbar, A11y],
+            slidesPerView: 1,
+            navigation: true,
+            pagination: { clickable: true },
+            scrollbar: { draggable: true },
+            onSwiper: (swiper) => console.log(swiper),
+            onSlideChange: () => console.log('slide change'),
+        },
+        bandBasic: {
+            modules: [Navigation, Pagination, Scrollbar, A11y],
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: true,
+        },
+        bandBig: {
+            modules: [Navigation, Pagination, Scrollbar, A11y],
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: true,
+        },
+        bandRank: {
             modules: [Navigation, Pagination, Scrollbar, A11y],
             slidesPerView: 3,
             spaceBetween: 20,
@@ -28,25 +59,25 @@ export default function Carousel({ type, bandData }) {
         },
     };
 
-    const selectedType = types[type] || types.main;
+    const selectedType = types[type] || types.bandBasic;
 
-    // useEffect(()=> {
-
-    // },[])
-    if (!bandData) {
-        return console.log(11);
-    }
+    useEffect(() => {
+        if (!types[type]) {
+            console.warn(`Invalid type: ${type}. Defaulting to bandBasic.`);
+        }
+        console.log(selectedType);
+    }, [type, selectedType]);
+    // if (!bandData) {
+    //     console.log(1);
+    //     return console.log(11);
+    // }
 
     return (
-        <div className={`${styles.Carousel} ${styles[type]}`}>
+        <div className={`${styles.Carousel} ${styles.types[type]}`}>
             <Swiper className={styles.Swiper} {...selectedType}>
                 {bandData.map((item, idx) => (
                     <SwiperSlide key={item.code} className={styles.SwiperSlide}>
-                        <div>
-                            <img src={item.imageUrl} alt={item.title} />
-                            <h3>{item.title}</h3>
-                            {/* Render other properties as needed */}
-                        </div>
+                        <CarouselItem item={item} />
                     </SwiperSlide>
                 ))}
             </Swiper>
@@ -54,5 +85,5 @@ export default function Carousel({ type, bandData }) {
     );
 }
 Carousel.defaultProps = {
-    type: 'main',
+    type: 'bandBasic',
 };

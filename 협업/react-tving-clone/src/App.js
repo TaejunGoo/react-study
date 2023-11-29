@@ -1,5 +1,9 @@
+import {Route, Routes, BrowserRouter} from 'react-router-dom';
+
 import React, {useEffect, useState} from 'react';
-import MainBody from './component/MainBody';
+import Main from './pages/Main';
+import Detail from './pages/Detail';
+
 import './assets/css/reset.scss'
 import './assets/css/global.scss'
 
@@ -16,9 +20,12 @@ function App(){
 
   return(
     <MoveStateContext.Provider value={moveList}>
-      <div className='App'>
-        <MainBody/>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main/>}/>
+          <Route path="/detail" element={<Detail/>}/>
+        </Routes>
+      </BrowserRouter>
     </MoveStateContext.Provider>
   
   )

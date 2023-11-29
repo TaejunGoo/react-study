@@ -9,7 +9,6 @@ import 'swiper/scss/autoplay';
 
 const Slider = (props) => {
     const {slideItem, slideOptions} = props;
-
     return(
         <>
             <Swiper

@@ -1,10 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import {labelType} from './../../utils/labelType';
 
 const SlideItem = ({slideItem, isRank, slideIdx, isMain}) => {
+    const navigate = useNavigate();
     const trueTypes = slideItem.label ? Object.keys(slideItem.label).filter(key => slideItem.label[key]) : '';
     const returnLabel = labelType.filter((item)=> trueTypes.includes(item.type))
     return(
-        <div className={"slide_item"}>
+        <div className={"slide_item"} onClick={()=>{navigate('/detail', {replace : false})}}>
             {trueTypes.length > 0 && 
                 returnLabel.map((item, i)=>{
                 return(

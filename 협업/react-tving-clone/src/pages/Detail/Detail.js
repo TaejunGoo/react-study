@@ -1,27 +1,25 @@
+import React, { useContext } from 'react';
 
-import React, { useContext, useEffect, useState } from "react";
-import { DetailStateContext } from "../App";
-import { ListStateContext } from "../App";
-import TagList from "../component/TagList";
-import styles from '../assets/css/detailStyle.module.scss';
+import { DetailStateContext } from '../../App';
+import { ListStateContext } from '../../App';
+import TagList from '../../component/TagList/TagList';
+import Icons from '../../component/Icons/Icons';
+import Category from '../../component/Category/Category';
+import Slide from '../../component/Slide/Slide';
+import styles from './Detail.module.scss';
 import classNames from 'classnames/bind';
-import Icons from '../component/Icons';
-import Category from "../component/Category";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-
 
 const Detail = () => {
     const cx = classNames.bind(styles);
     const itemDetail = useContext(DetailStateContext);   
     const itemList = useContext(ListStateContext);   
-    // console.log(itemList[0].items)
-    const slideList = itemList[1].items;
+    const slideList = itemList[2];
 
     return (
         <div className={styles.Detail}>          
+            
             <div className={styles.Detail_area}>
-                <div className={styles.detail_bg}><img src={itemDetail.thumbnail} alt={itemDetail.contentName} /></div>  
+                <div className={styles.detail_bg} style={{backgroundImage: `url(${itemDetail.thumbnail})`}} />
                 <div className={styles.Detail_inner}>                
                     <div className={styles.detail_summary}>
                         <div className={styles.detail_category}>
@@ -35,7 +33,7 @@ const Detail = () => {
                         </div>
                         <div className={styles.detail_btn}>
                             <button type="button" className={styles.detail_btn_view}>
-                                {`▶ ${itemDetail.episodeSort}화 시청하기`}
+                                {itemDetail.episodeSort ? (`▶ ${itemDetail.episodeSort}화 시청하기`) : ('▶ 시청하기')}
                             </button>
                             <div className={styles.detail_btn_util}>
                                 <Icons />
@@ -62,25 +60,13 @@ const Detail = () => {
                         <div className={cx('detail_thumb_item', 'detail_thumb_mo')}>
                             <img src={itemDetail.mobileThumbnail} alt={itemDetail.contentName} />
                         </div>
-                        <Category itemDetail={itemDetail} />
+                        <Category itemDetail={itemDetail} thumbStyle="thumbStyle" />
                     </div>
                 </div>
             </div>
 
-            <div className={styles.Detail_related}>
-                <Swiper
-                    className={styles.SwiperContainer}
-                    spaceBetween={20}
-                    slidesPerView={'auto'}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                >
-                    {slideList.map((it, idx) => (
-                        <SwiperSlide key={idx}>
-                            <img src={it.imageUrl} alt="" />    
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+            <div className={styles.Detail_related}>                
+                <Slide slideList={slideList} />
             </div>
         </div>
     )

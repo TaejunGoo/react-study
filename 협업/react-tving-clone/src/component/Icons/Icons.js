@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../assets/css/detailStyle.module.scss';
+import styles from './Icons.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";

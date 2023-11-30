@@ -28,7 +28,22 @@ const Home = () => {
                         bandName={'오늘의 티빙 TOP10'}
                     />
                     <CarouselList type={'bandBasic'} />
-                    <CarouselList bandName={'지금 방영중인 인기 콘텐츠'} />
+                    <CarouselList
+                        type={'bannerSub'}
+                        bandName={'지금 방영중인 인기 콘텐츠'}
+                    />
+                    <CarouselList
+                        type={'bannerList'}
+                        bandName={'지금 방영중인 인기 콘텐츠'}
+                    />
+                    <CarouselList
+                        type={'bandBasic'}
+                        bandName={'지금 방영중인 인기 콘텐츠'}
+                    />
+                    <CarouselList
+                        type={'bandBig'}
+                        bandName={'지금 방영중인 인기 콘텐츠'}
+                    />
                 </ContentContainer>
             </MainContainer>
             <Footer />

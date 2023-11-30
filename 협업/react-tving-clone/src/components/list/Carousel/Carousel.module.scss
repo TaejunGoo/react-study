@@ -1,19 +1,30 @@
 .Carousel {
+    padding: 60px 60px 40px;
     .Swiper {
         // background-color: pink;
         margin-bottom: 20px;
+        height: 100%;
+        overflow: hidden;
     }
     .SwiperSlide {
         background-color: pink;
     }
 }
-// .main {
-//     .Swiper {
-//         height: 500px;
-//     }
-// }
-// .list {
-//     .Swiper {
-//         height: 200px;
-//     }
-// }
+.bannerMain {
+    height: 690px;
+}
+.bannerSub {
+    height: 240px;
+}
+.bannerList {
+    height: 293px;
+}
+.bandBasic {
+    height: 440px;
+}
+.bandBig {
+    height: 650px;
+}
+.bandRank {
+    height: 440px;
+}

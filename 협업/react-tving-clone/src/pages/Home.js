@@ -24,24 +24,24 @@ const Home = () => {
                         콩콩팥팥
                     </Link>
                     <CarouselList
-                        type={'bannerMain'}
-                        bandName={'오늘의 티빙 TOP10'}
+                        carouselType={'bannerMain'}
+                        bandName={'메인배너'}
                     />
-                    <CarouselList type={'bandBasic'} />
                     <CarouselList
-                        type={'bannerSub'}
+                        carouselType={'bannerSub'}
+                        bandName={'지금 방영중인 인기 콘텐츠'}
+                    />
+                    <CarouselList bandName={'지금 방영중인 인기 콘텐츠'} />
+                    <CarouselList
+                        carouselType={'bannerList'}
                         bandName={'지금 방영중인 인기 콘텐츠'}
                     />
                     <CarouselList
-                        type={'bannerList'}
+                        carouselType={'bandBasic'}
                         bandName={'지금 방영중인 인기 콘텐츠'}
                     />
                     <CarouselList
-                        type={'bandBasic'}
-                        bandName={'지금 방영중인 인기 콘텐츠'}
-                    />
-                    <CarouselList
-                        type={'bandBig'}
+                        carouselType={'bandBig'}
                         bandName={'지금 방영중인 인기 콘텐츠'}
                     />
                 </ContentContainer>

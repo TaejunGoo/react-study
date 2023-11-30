@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Carousel from './Carousel/Carousel';
 import useBandList from '../../hooks/use-bandList';
 
-export default function CarouselList({ type, bandName }) {
+export default function CarouselList({ carouselType, bandName }) {
     const selectedBandData = useBandList(bandName);
 
     // useEffect(() => {
@@ -11,7 +11,7 @@ export default function CarouselList({ type, bandName }) {
 
     return (
         <>
-            <Carousel type={type} bandData={selectedBandData} />
+            <Carousel carouselType={carouselType} bandData={selectedBandData} />
         </>
     );
 }

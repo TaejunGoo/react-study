@@ -1,77 +1,62 @@
 [
     {
-        "band": {
-            "idx": 0,
-            "bandType": "BANNER_MAIN",
-            "items": [
-                {
-                    "title1": "DAY 2",
-                    "title2": "2023 MAMA",
-                    "description": "[\"DAY 2 본 시상식\", \"독점 생중계 보러가기\"]",
-                    "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/28/1701167420_1.jpg",
-                    "code": "C00579",
-                    "bannerCode": "BN0174",
-                    "label": "{isLive: true}"
-                },
-                {
-                    "title1": "AFC챔피언스리그",
-                    "title2": "킷치 vs 전북",
-                    "description": "[\"킷치 SC vs 전북 현대\", \"생중계 보러 가기\"]",
-                    "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/29/1701218402_1.jpg",
-                    "code": "C51864",
-                    "bannerCode": "BN0180",
-                    "label": "{isLive: true}"
-                },
-                {
-                    "title1": "공개 D-1",
-                    "description": "[\"프레젠터 박해수의 VFX 가상다큐\", \"<미래엔딩> 11월 30일 첫 공개\"]",
-                    "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/24/1700788340_1.jpg",
-                    "code": "P001749097",
-                    "bannerCode": "BN0169",
-                    "label": "{isOriginal: true}"
-                },
-                {
-                    "description": "[\"세계를 뒤엎을 댄서 발굴 프로젝트\", \"월드클래스 10대 여학생 댄서의 탄생\"]",
-                    "titleImageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/21/1700527798_1.png",
-                    "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/22/1700645070_1.jpg",
-                    "code": "P001749344",
-                    "bannerCode": "BN0161",
-                    "label": "{isOnly: true}"
-                },
-                {
-                    "description": "[\"'육탄전' 예능의 끝판왕\", \"한미 최정예 특수부대의 진검승부\"]",
-                    "titleImageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1800/ko/20230831/P001743596.png?v=1695138378",
-                    "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/10/25/1698197484_1.jpg",
-                    "code": "P001743596",
-                    "bannerCode": "BN0024",
-                    "label": "{}"
-                },
-                {
-                    "title1": "공개 D-4",
-                    "description": "[\"스우파2 여덟 크루의 서울 콘서트,\", \"12월 3일 저녁 6시 독점 생중계\"]",
-                    "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/29/1701189879_1.jpg",
-                    "linkUrl": "https://www.tving.com/more/special/SP0023",
-                    "bannerCode": "BN0178",
-                    "label": "{}"
-                }
-            ]
-        },
-        "homeType": "home",
-        "bandType": "BANNER_MAIN"
+        "bandName": "메인배너",
+        "items": [
+            {
+                "title1": "DAY 2",
+                "title2": "2023 MAMA",
+                "description": "[\"DAY 2 본 시상식\", \"독점 생중계 보러가기\"]",
+                "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/28/1701167420_1.jpg",
+                "code": "C00579",
+                "bannerCode": "BN0174",
+                "label": "{isLive: true}"
+            },
+            {
+                "title1": "AFC챔피언스리그",
+                "title2": "킷치 vs 전북",
+                "description": "[\"킷치 SC vs 전북 현대\", \"생중계 보러 가기\"]",
+                "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/29/1701218402_1.jpg",
+                "code": "C51864",
+                "bannerCode": "BN0180",
+                "label": "{isLive: true}"
+            },
+            {
+                "title1": "공개 D-1",
+                "description": "[\"프레젠터 박해수의 VFX 가상다큐\", \"<미래엔딩> 11월 30일 첫 공개\"]",
+                "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/24/1700788340_1.jpg",
+                "code": "P001749097",
+                "bannerCode": "BN0169",
+                "label": "{isOriginal: true}"
+            },
+            {
+                "description": "[\"세계를 뒤엎을 댄서 발굴 프로젝트\", \"월드클래스 10대 여학생 댄서의 탄생\"]",
+                "titleImageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/21/1700527798_1.png",
+                "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/22/1700645070_1.jpg",
+                "code": "P001749344",
+                "bannerCode": "BN0161",
+                "label": "{isOnly: true}"
+            },
+            {
+                "description": "[\"'육탄전' 예능의 끝판왕\", \"한미 최정예 특수부대의 진검승부\"]",
+                "titleImageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1800/ko/20230831/P001743596.png?v=1695138378",
+                "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/10/25/1698197484_1.jpg",
+                "code": "P001743596",
+                "bannerCode": "BN0024",
+                "label": "{}"
+            },
+            {
+                "title1": "공개 D-4",
+                "description": "[\"스우파2 여덟 크루의 서울 콘서트,\", \"12월 3일 저녁 6시 독점 생중계\"]",
+                "imageUrl": "https://image.tving.com/ntgs/operation/banner/2023/11/29/1701189879_1.jpg",
+                "linkUrl": "https://www.tving.com/more/special/SP0023",
+                "bannerCode": "BN0178",
+                "label": "{}"
+            }
+        ]
     },
     {
-        "homeType": "home",
-        "bandType": "VOD_BASIC_RANKING",
-        "isPan": true,
-        "band": {
-            "idx": 2,
-            "bandType": "VOD_BASIC_RANKING",
-            "bandName": "오늘의 티빙 TOP 20",
-            "items": "[{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]"
-        },
-        "bandOrder": 2,
-        "isLoading": true,
-        "inView": true
+        "bandName": "오늘의 티빙 TOP 20",
+        "items": "[{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]"
     },
     {
         "bandName": "오늘의 티빙 TOP10",

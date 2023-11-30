@@ -1,10 +1,21 @@
 .MyMenuBtn {
     button {
-        width: 36px;
-        height: 36px;
-        background-image: url(https://image.tving.com/upload/profile/default.png/dims/resize/100);
+        position: relative;
+        width: 2.333rem;
+        height: 2.333rem;
+        background-image: url(../../../assets/images/icon_MyMenuBtn.webp);
         background-size: 100%;
         background-repeat: no-repeat;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1em;
+        left: -1em;
+        right: -1em;
+        bottom: -1em;
+        background-color: transparent;
+        z-index: -1;
     }
     &:hover + .MyMenuContent {
         visibility: visible;
@@ -33,6 +44,17 @@
     -moz-transform: translate(0,-10px);
     -ms-transform: translate(0,-10px);
     transform: translate(0,-10px);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1em;
+        left: -1em;
+        right: -1em;
+        bottom: -1em;
+        background-color: transparent;
+        z-index: -1;
+    }
 
     &:hover {
         visibility: visible;
@@ -81,9 +103,22 @@
                     color: #a3a3a3;
                     -webkit-transition: color 0.1s;
                     transition: color 0.1s;
-
+                    
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border-top:1px solid #a3a3a3;
+                        border-right:1px solid #a3a3a3;
+                        transform: rotate(45deg);
+                        margin-left: 5px;
+                    }
                     &:hover {
                         color: #dedede;
+                    }
+                    &:hover::after{
+                        border-color: #fff;
                     }
                 }
             }
@@ -111,5 +146,5 @@ hr{
     width: auto;
     margin: 1.667rem 0 1.167rem;
     border-width: 1px 0 0 0;
-    border-color: #2e2e2e;
+    border-color: #a3a3a3;
 }

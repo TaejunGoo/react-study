@@ -1,0 +1,161 @@
+.SearchLayer{
+    position: fixed;
+    top: 0px;
+    z-index: 150;
+    height: 100%;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+
+    .search__input{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        padding: 3.75em 0 1em;
+        border-bottom: 2px solid #fff;
+        margin-bottom: 70px;
+
+        input{
+            width: calc(100% - 3rem);
+            outline: none;
+            border-width: 0px;
+            background: transparent;
+            font-size: 2em;
+            font-weight: 400;
+            color: #fff;
+            &::placeholder{
+                display: block;
+                color: #4d4d4d;
+            }
+        }
+
+        button{
+            position: absolute;
+            bottom: 1em;
+            right: 0;
+            margin: 0;
+            width: 2.75em;
+            height: 2.75em;
+            opacity: 1;
+            background-image: url(./../../../assets/images/ico_search.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 72%;
+            background-size: contain;
+            font-size: 1rem;
+            text-indent: -9999px;
+        }
+    }
+}
+.isLayer{
+    max-height: 100%;
+    background-color: rgba(25, 25, 25, 0.99);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px 0px;
+    overflow: hidden;
+    padding-top: 5.583rem !important;
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
+    padding-bottom: 5rem;
+}
+.search__preview{
+    display: flex;
+
+    ul {
+        padding-left: 3.35rem;
+        width: 50%;
+        border-left: 1px solid #2e2e2e;
+        color: #fff;
+        font-size: 50px;
+
+        &:first-child {
+            padding-left: 0;
+            border: none;
+        }
+        h2 {
+            color: rgb(222, 222, 222);
+            line-height: 2.1;
+            font-size: 1.667rem;
+            font-weight: bold;
+            margin-bottom: 1.667rem;   
+            
+            button{
+                margin-left: 1.174em;
+                font-size: 1.175rem;
+                font-weight: 400;
+                color: gray;
+                vertical-align: .175em;
+                line-height: normal;
+                span{
+                    margin-left: .5em;
+                    width: 1.175em;
+                    height: 1.175em;
+                    display: inline-block;
+                    background-image: url(../../../assets/images/icon_x_circle.svg);
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    background-size: contain;
+                    line-height: normal;
+                    font-size: 1rem;
+                    text-indent: -9999px;
+                }
+            }
+        }
+
+        li{
+            margin: .75rem 0;
+            font-size: 1.335rem;
+            font-weight: 400;
+            color: hsla(0,0%,87%,.7);
+            transition: color .1s;
+            line-height: 1.5;
+
+            &:hover{
+                color: rgb(222, 222, 222);;
+            }
+
+            .txt{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                cursor: pointer;
+            }
+
+            .deleteBtn{
+                margin-left: 1rem;
+                min-width: 1rem;
+                min-height: 1rem;
+                background-image: url("../../../assets/images/icon_x.svg");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                opacity: 0.7;
+                line-height: normal;
+                font-size: 1rem;
+                text-indent: -9999px;
+                cursor: pointer;
+                vertical-align: middle;
+            }
+        }
+        
+        &.Popular button{
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            color: rgb(163, 163, 163);
+            transition: color 0.1s ease 0s;
+
+            span{
+                width: 2.5rem;
+                font-size: 1.333rem;
+                display: inline-block;
+                color: rgb(255, 21, 60);
+            }
+            h3{
+                cursor: pointer;
+                font-size: 1.333rem;
+                font-weight: 400;
+                &:hover{
+                    color: rgb(222, 222, 222);
+                }
+            }
+        }
+    }
+}

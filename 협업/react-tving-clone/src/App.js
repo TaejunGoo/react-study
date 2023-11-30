@@ -2,16 +2,17 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './assets/css/reset.scss'
+import './assets/css/common.scss'
 
-import Header from './assets/component/Header';
-import Footer from './assets/component/Footer';
-import Container from './assets/component/Container';
+import Header from './component/Header/Header';
+import Footer from './component/Footer/Footer';
+import Container from './component/Container';
 
-import Home from './assets/pages/Home'
-import A from './assets/pages/A'
-import B from './assets/pages/B'
-import C from './assets/pages/C'
-import D from './assets/pages/D'
+import Home from './pages/Home'
+import Series from './pages/Series'
+import Movie from './pages/Movie'
+import Live from './pages/Live'
+import Paramount from './pages/Paramount'
 
 
 
@@ -23,10 +24,10 @@ function App(){
                 <Container>
                     <Routes>
                         <Route path='/' element={<Home />} />
-                        <Route path='/A' element={<A />} />
-                        <Route path='/B' element={<B />} />
-                        <Route path='/C' element={<C />} />
-                        <Route path='/D' element={<D />} />
+                        <Route path='/Series' element={<Series />} />
+                        <Route path='/Movie' element={<Movie />} />
+                        <Route path='/Live' element={<Live />} />
+                        <Route path='/Paramount' element={<Paramount />} />
                     </Routes>
                 </Container>
                 <Footer />

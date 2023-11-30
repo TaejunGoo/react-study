@@ -1,0 +1,30 @@
+.snsType{
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-indent: -9999px;
+}
+.snsType + .snsType{
+    margin-left: 1rem;
+}
+.SnsBtn {
+    &_youtube {
+        background-image: url(../../../assets/images/ico_sns_youtube.svg);
+    }
+    &_instagram {
+        background-image: url(../../../assets/images/ico_sns_instagram.svg);
+    }
+
+    &_twitter {
+        background-image: url(../../../assets/images/ico_sns_twitter.svg);
+    }
+
+    &_facebook {background-image: url(../../../assets/images/ico_sns_facebook.svg);color: pink;
+    }
+}
+

@@ -1,0 +1,49 @@
+.SelectBrand{
+    .react-select{
+        &__control{
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            outline: 0px;
+            min-height: initial;
+            line-height: normal;
+            cursor: pointer;
+
+            .react-select__indicators{
+                display: none;
+            }
+
+            .react-select__placeholder{
+                color: rgb(163, 163, 163);
+                &:hover{
+                    color: rgb(222, 222, 222);
+                }
+            }
+        }
+        &__menu{
+            width: max-content;
+            min-width: 100%;
+            background-color: #212121;
+            border: 1px solid rgb(163, 163, 163);
+
+            ::-webkit-scrollbar {
+                width: 5px;
+            }
+            ::-webkit-scrollbar-thumb {
+                background-color: rgb(163, 163, 163); 
+                border-radius: 5px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background-color: rgb(102, 101, 101); 
+            }
+
+            .react-select__option{
+                background: #212121;
+                &:hover{
+                    background-color: rgb(25 25 25/1);
+                }
+            }
+        }
+    }
+}

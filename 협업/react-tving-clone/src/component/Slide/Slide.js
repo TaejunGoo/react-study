@@ -11,19 +11,16 @@ import SlideCategory from '../SlideCategory/SlideCategory';
 const Slide = ({ slideList }) => {
     const slideSwiper = slideList.items;
 
-    // 첫화, 최신화 버튼
-    const [isOldest, setIsOldest] = useState(true);
-    const [isLatest, setIsLatest] = useState(false);
-    const onFirst = () => {
-        if (!isOldest) {
-            setIsOldest((current) => !current);                        
-            setIsLatest(!isLatest)  
+    // 첫화, 최신화 버튼   
+    const [isSort, setIsSort] = useState(true);
+    const handleSortOldest = () => {
+        if (isSort === false) {
+            setIsSort((current) => !current);
         }
     }
-    const onLast = () => {
-        if (!isLatest) {
-            setIsLatest((current) => !current);                        
-            setIsOldest(!isOldest)
+    const handleSortLatest = () => {
+        if (isSort ===  true) {
+            setIsSort((current) => !current);
         }
     }
 
@@ -34,21 +31,21 @@ const Slide = ({ slideList }) => {
                     <div className="left">
                         <strong className="tit">{slideList.bandName}</strong>
                     </div>
-                    <div className="right">                        
+                    <div className="right">                    
                         <button 
                             type="button"      
-                            className={`btn_sort btn_first ${isOldest && 'active'}`}
-                            onClick={onFirst}                            
+                            className={`btn_sort btn_first ${isSort && 'active'}`}
+                            onClick={handleSortOldest}                            
                         >
                             첫화부터
                         </button>
                         <button 
                             type="button" 
-                            className={`btn_sort btn_last ${isLatest && 'active'}`}
-                            onClick={onLast}
+                            className={`btn_sort btn_last ${!isSort && 'active'}`}
+                            onClick={handleSortLatest}
                         >
                             최신화부터
-                        </button>
+                        </button>    
                         <span className="btn_toggle">
                             <input type="checkbox" id="chk" className="toggle" />
                             <label htmlFor="chk" className="label">연속재생</label>
@@ -67,7 +64,7 @@ const Slide = ({ slideList }) => {
                 // onSlideChange={() => console.log('slide change')}
                 // onSwiper={(swiper) => console.log(swiper)}
             >
-                {(isOldest) ?                                         
+                {(isSort) ?                                         
                     (slideSwiper.map((it, idx) => (
                         <SwiperSlide className="slide" key={idx}>
                             <Link to="">

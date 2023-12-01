@@ -4,6 +4,7 @@ import styles from './InteractBtns.module.scss';
 import { ReactComponent as HeartImg } from 'assets/images/icon_heart.svg';
 import { ReactComponent as HeartOnImg } from 'assets/images/icon_heart_on.svg';
 import { ReactComponent as ShareImg } from 'assets/images/icon_share.svg';
+import { CustomSwalToast } from 'util/CustomSwalToast/CustomSwalToast';
 
 const InteractBtns = () => {
     const cx = classNames.bind(styles);
@@ -12,6 +13,7 @@ const InteractBtns = () => {
     const [ isViewLayer, setIsViewLayer ] = useState(false);
 
     const handleLike = () => {
+        CustomSwalToast(isLiked? '찜 해제되었습니다.' : '찜 등록되었습니다.')
         setIsLiked(!isLiked);
     };
     const handleShare = () => {

@@ -10,7 +10,13 @@ const Story = ({story}) => {
 
     useEffect(() => {
         const checkTextOveflow = () => {
-            setIsOverflow(contRef.current.clientHeight < contRef.current.scrollHeight? true : false)
+            document.fonts.ready.then(() => {
+                console.log('font ready')
+                setIsOverflow(contRef.current.clientHeight < contRef.current.scrollHeight? true : false);
+            }).catch((error) => {
+                console.error('font error')
+                setIsOverflow(contRef.current.clientHeight < contRef.current.scrollHeight? true : false);
+            })
         }
         checkTextOveflow();
     },[story]);

@@ -1,27 +1,32 @@
 import { useContext } from 'react';
 import { MoveStateContext } from './../../App';
-import Slider from './../Slide/Slider'
+import Slider from './../Slide/Slider';
 
 import {main} from './../../utils/main';
 import './MainBody.scss'
 const MainBody = () => {    
     const moveList = useContext(MoveStateContext);
-    
+
     return(
         <div className={"content_wrap"}>
         {
-            moveList.map((el,i)=>
-                <section className={["slider",main(el).className].join(" ")} key={`${main(el).className}-${i}`}>
-                    {
-                        main(el).listTit && <p className={"slider_tit"}>{main(el).listTit}</p>
-                    }
-                    <Slider 
-                        slideItem={
-                            main(el).slideItem
+            moveList.map((el,i)=>{
+                const {className, listTit, slideItem , slideOptions} = main(el);
+                return(
+                    <section key={`${className}-${i}`} className={["slider",className].join(" ")}>
+                        {
+                            listTit && <p className={"slider_tit"}>{listTit}</p>
                         }
-                        slideOptions={main(el).slideOptions}>
-                    </Slider>
-                </section>
+                        <Slider 
+                            slideItem={
+                                slideItem
+                            }
+                            slideOptions={slideOptions}>
+                        </Slider>
+                    </section>
+                )
+            }
+                
             )
         }
         </div>        

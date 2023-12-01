@@ -97,6 +97,7 @@
         border-radius: 4px;
         font-weight: 900;
         position: absolute;
+        z-index: 1;
 
         &-lt{
             left: 2px;
@@ -205,6 +206,7 @@
         left: 0;
         bottom: 0;
         color: red;
+        z-index: 1;
     }
 
     .banner_img{

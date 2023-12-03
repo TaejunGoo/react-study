@@ -1,0 +1,37 @@
+.MainBannerItem {
+    position: relative;
+    height: 613px;
+}
+.backgroundImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.txtWrap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 50px 50px;
+    p {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    .title1,
+    .title2 {
+        font-size: 50px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+}
+.titleImg {
+    min-width: 300px;
+    max-width: 700px;
+    max-height: 150px;
+    object-fit: contain;
+}

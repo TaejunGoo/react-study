@@ -26,23 +26,31 @@ const Home = () => {
                     <CarouselList
                         carouselType={'bannerMain'}
                         bandName={'메인배너'}
+                        perView={'1'}
+                        itemType={'MainBannerItem'}
                     />
                     <CarouselList
                         carouselType={'bannerSub'}
-                        bandName={'지금 방영중인 인기 콘텐츠'}
+                        bandName={'VOD_SPECIAL_BUTTON'}
+                        perView={'5'}
+                        itemType={'ChannelButtonItem'}
                     />
-                    <CarouselList bandName={'지금 방영중인 인기 콘텐츠'} />
                     <CarouselList
-                        carouselType={'bannerList'}
-                        bandName={'지금 방영중인 인기 콘텐츠'}
+                        carouselType={'bandBasic'}
+                        bandName={'오늘의 티빙 TOP10'}
+                        perView={'5'}
+                        itemType={'RankBandItem'}
+                    />
+                    <CarouselList
+                        carouselType={'bandBasic'}
+                        bandName={'티빙 오리지널'}
+                        perView={'6'}
+                        itemType={'OriginItem'}
                     />
                     <CarouselList
                         carouselType={'bandBasic'}
                         bandName={'지금 방영중인 인기 콘텐츠'}
-                    />
-                    <CarouselList
-                        carouselType={'bandBig'}
-                        bandName={'지금 방영중인 인기 콘텐츠'}
+                        itemType={'BasicBandItem'}
                     />
                 </ContentContainer>
             </MainContainer>

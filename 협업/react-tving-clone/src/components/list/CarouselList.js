@@ -2,7 +2,12 @@ import React, { useEffect } from 'react';
 import Carousel from './Carousel/Carousel';
 import useBandList from '../../hooks/use-bandList';
 
-export default function CarouselList({ carouselType, bandName }) {
+export default function CarouselList({
+    carouselType,
+    bandName,
+    perView,
+    itemType,
+}) {
     const selectedBandData = useBandList(bandName);
 
     // useEffect(() => {
@@ -11,7 +16,12 @@ export default function CarouselList({ carouselType, bandName }) {
 
     return (
         <>
-            <Carousel carouselType={carouselType} bandData={selectedBandData} />
+            <Carousel
+                carouselType={carouselType}
+                bandData={selectedBandData}
+                perView={perView}
+                itemType={itemType}
+            />
         </>
     );
 }

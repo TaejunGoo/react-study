@@ -19,5 +19,5 @@ export default function useBandList(bandName1) {
     }, []);
 
     const selectedBand = bandData.find((item) => item.bandName === bandName1);
-    return selectedBand ? selectedBand.items : [];
+    return selectedBand ? selectedBand : {};
 }

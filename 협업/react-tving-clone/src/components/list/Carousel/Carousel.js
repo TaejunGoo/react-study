@@ -10,7 +10,12 @@ import 'swiper/css/scrollbar';
 import styles from './Carousel.module.scss';
 import CarouselItem from '../CarouselItem/CarouselItem';
 
-export default function Carousel({ carouselType, bandData }) {
+export default function Carousel({
+    carouselType,
+    bandData,
+    perView,
+    itemType,
+}) {
     const defaultMod = [Navigation, Pagination, A11y];
     const defaultOpt = {
         spaceBetween: 10,
@@ -18,82 +23,44 @@ export default function Carousel({ carouselType, bandData }) {
         pagination: { clickable: true },
     };
     const carouselTypes = {
+        // 메인배너
         bannerMain: {
             swiperOpt: {
                 modules: [...defaultMod],
                 ...defaultOpt,
-                slidesPerView: 1,
+
+                slidesPerView: perView ? parseInt(perView) : 3,
                 // onSwiper: (swiper) => console.log(swiper),
                 // onSlideChange: () => console.log('slide change'),
             },
             outerOpt: {
-                title: true,
-                vOnly: true,
+                title: false,
             },
         },
         bannerSub: {
             swiperOpt: {
                 modules: [...defaultMod],
                 ...defaultOpt,
-                slidesPerView: 1,
+
+                slidesPerView: perView ? parseInt(perView) : 3,
                 // onSwiper: (swiper) => console.log(swiper),
                 // onSlideChange: () => console.log('slide change'),
             },
             outerOpt: {
-                title: true,
-                vOnly: true,
-            },
-        },
-        bannerList: {
-            swiperOpt: {
-                modules: [...defaultMod],
-                ...defaultOpt,
-                slidesPerView: 2,
-                // onSwiper: (swiper) => console.log(swiper),
-                // onSlideChange: () => console.log('slide change'),
-            },
-            outerOpt: {
-                title: true,
-                vOnly: true,
+                title: false,
             },
         },
         bandBasic: {
             swiperOpt: {
                 modules: [...defaultMod],
                 ...defaultOpt,
-                slidesPerView: 5,
+
+                slidesPerView: perView ? parseInt(perView) : 7,
                 // onSwiper: (swiper) => console.log(swiper),
                 // onSlideChange: () => console.log('slide change'),
             },
             outerOpt: {
                 title: true,
-                vOnly: true,
-            },
-        },
-        bandBig: {
-            swiperOpt: {
-                modules: [...defaultMod],
-                ...defaultOpt,
-                slidesPerView: 3,
-                // onSwiper: (swiper) => console.log(swiper),
-                // onSlideChange: () => console.log('slide change'),
-            },
-            outerOpt: {
-                title: true,
-                vOnly: true,
-            },
-        },
-        bandRank: {
-            swiperOpt: {
-                modules: [...defaultMod],
-                ...defaultOpt,
-                slidesPerView: 1,
-                // onSwiper: (swiper) => console.log(swiper),
-                // onSlideChange: () => console.log('slide change'),
-            },
-            outerOpt: {
-                title: true,
-                vOnly: true,
             },
         },
     };
@@ -103,24 +70,36 @@ export default function Carousel({ carouselType, bandData }) {
     const outerOpt = { ...selectedType.outerOpt };
 
     // useEffect(() => {
-    //     // if (!types[type]) {
-    //     //     console.warn(`Invalid type: ${type}. Defaulting to bandBasic.`);
-    //     // }
-    //     // console.log(styles);
-    // }, [carouselType, selectedType]);
+    //     // console.log(perView);
+    //     console.log(bandData);
+    // }, []);
+    const data = bandData.items;
+    // useEffect(() => {
+    //     // console.log(perView);
+    //     console.log(data);
+    // }, []);
     return (
         <div
-            className={`${styles.Carousel} ${styles[carouselType]}`}
+            className={`${carouselType} ${styles.Carousel} ${styles[carouselType]}`}
             {...outerOpt}
         >
             {console.log(outerOpt)}
-            {/* {outerOpt[title] === true ? <span>1</span> : ''} */}
+            {outerOpt.title === true ? (
+                <h1 className={styles.bandTitle}>{bandData.bandName}</h1>
+            ) : (
+                ''
+            )}
             <Swiper className={styles.Swiper} {...swiperOpt}>
-                {bandData.map((item, idx) => (
-                    <SwiperSlide key={item.idx} className={styles.SwiperSlide}>
-                        <CarouselItem item={item} />
-                    </SwiperSlide>
-                ))}
+                {data &&
+                    data.map((item, idx) => (
+                        <SwiperSlide key={idx} className={styles.SwiperSlide}>
+                            <CarouselItem
+                                item={item}
+                                idx={idx}
+                                itemType={itemType}
+                            />
+                        </SwiperSlide>
+                    ))}
             </Swiper>
         </div>
     );

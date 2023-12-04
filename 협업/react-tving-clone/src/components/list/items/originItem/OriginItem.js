@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './OriginItem.module.scss';
+import Labels from 'components/list/labels/Labels';
 
 export default function OriginItem({ item }) {
     return (
@@ -21,6 +22,7 @@ export default function OriginItem({ item }) {
                 )}
                 <p>{item.description}</p>
             </div>
+            <Labels item={item} />
         </div>
     );
 }

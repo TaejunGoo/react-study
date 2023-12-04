@@ -34,7 +34,7 @@ export default function Carousel({
                 // onSlideChange: () => console.log('slide change'),
             },
             outerOpt: {
-                title: false,
+                isTitle: false,
             },
         },
         bannerSub: {
@@ -47,7 +47,7 @@ export default function Carousel({
                 // onSlideChange: () => console.log('slide change'),
             },
             outerOpt: {
-                title: false,
+                isTitle: false,
             },
         },
         bandBasic: {
@@ -60,7 +60,7 @@ export default function Carousel({
                 // onSlideChange: () => console.log('slide change'),
             },
             outerOpt: {
-                title: true,
+                isTitle: true,
             },
         },
     };
@@ -79,16 +79,10 @@ export default function Carousel({
     //     console.log(data);
     // }, []);
     return (
-        <div
-            className={`${carouselType} ${styles.Carousel} ${styles[carouselType]}`}
-            {...outerOpt}
-        >
-            {console.log(outerOpt)}
-            {outerOpt.title === true ? (
+        <div className={`${styles.Carousel} ${styles[carouselType]}`}>
+            {outerOpt.isTitle === true ? (
                 <h1 className={styles.bandTitle}>{bandData.bandName}</h1>
-            ) : (
-                ''
-            )}
+            ) : null}
             <Swiper className={styles.Swiper} {...swiperOpt}>
                 {data &&
                     data.map((item, idx) => (

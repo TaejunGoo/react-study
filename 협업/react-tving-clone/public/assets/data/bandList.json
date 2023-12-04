@@ -143,7 +143,8 @@
                 "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231030/0155/P001747179.jpg",
                 "label": {
                     "isOnly": true,
-                    "isNewEpisode": true
+                    "isNewEpisode": true,
+                    "isDubbing": false
                 }
             },
             {
@@ -301,7 +302,8 @@
                 "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP1130/ko/20231123/0539/P001747179.jpg",
                 "label": {
                     "isOnly": true,
-                    "isNewEpisode": true
+                    "isNewEpisode": true,
+                    "isGrade19": true
                 }
             },
             {
@@ -310,7 +312,8 @@
                 "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231113/0900/P001749097.jpg",
                 "label": {
                     "isOriginal": true,
-                    "isNewEpisode": true
+                    "isNewEpisode": true,
+                    "isGrade19": true
                 }
             },
             {

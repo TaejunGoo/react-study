@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './BasicBandItem.module.scss';
+import Labels from 'components/list/labels/Labels';
 
 export default function BasicBandItem({ item }) {
     return (
@@ -20,6 +21,7 @@ export default function BasicBandItem({ item }) {
                     />
                 )}
                 <p>{item.description}</p>
+                <Labels item={item} />
             </div>
         </div>
     );

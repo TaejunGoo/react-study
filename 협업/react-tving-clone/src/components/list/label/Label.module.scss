@@ -1,0 +1,58 @@
+// %basicLabel {
+//     width: 42px;
+//     height: 30px;
+// }
+.LeftWrap {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+}
+.RightWrap {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+.Label {
+    border-radius: 4px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.vOnly {
+    display: block;
+    width: 75px;
+    height: 19px;
+    background-image: url('/assets/images/TvingOnlyLabel.svg');
+}
+.new {
+    display: block;
+    width: 75px;
+    height: 19px;
+    background-image: url('/assets/images/TvingOriginalLabel.svg');
+    background-color: black;
+}
+.dub {
+    display: block;
+    width: 75px;
+    height: 19px;
+    background-image: url('/assets/images/TvingOriginalLabel.svg');
+}
+.quick {
+    display: block;
+    width: 75px;
+    height: 19px;
+    background-image: url('/assets/images/TvingOriginalLabel.svg');
+}
+.Grade19 {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('/assets/images/tag_cptg_19.svg');
+}
+.Grade15 {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('/assets/images/tag_cptg_15.svg');
+}

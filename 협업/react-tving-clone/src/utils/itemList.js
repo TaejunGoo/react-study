@@ -124,7 +124,7 @@ export const itemList = [{
                 "title": "힘쎈여자 강남순",
                 "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231029/1529/P001746797.jpg",
                 "label": {
-                    "isNewEpisode": true
+                    "isNewEpisode": true,
                 }
             },
             {
@@ -453,7 +453,8 @@ export const itemList = [{
                 "title": "길 위의 연인들",
                 "imageUrl": "https://image.tving.com/ntgs/contents/CTC/caip/CAIP0900/ko/20231029/0320/P001746843.jpg",
                 "label": {
-                    "isGrade19": true
+                    "isGrade19": true,
+                    "isDubbing" : true,
                 }
             },
             {

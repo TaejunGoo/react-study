@@ -91,11 +91,9 @@
         transform: translateY(-0.6rem);
     }
 
-    .label{
-        display: inline-flex;
-        padding: 2px 4px;
-        border-radius: 4px;
-        font-weight: 900;
+    .label_wrap{
+        display: flex;
+        gap: 2px;
         position: absolute;
         z-index: 1;
 
@@ -120,6 +118,37 @@
             padding: 0;
             font-size: 20px;
         }
+    }
+
+    .label{
+        display: inline-flex;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-weight: 900;
+        // position: absolute;
+        // z-index: 1;
+
+        // &-lt{
+        //     left: 2px;
+        //     top: 2px;
+        // }
+
+        // &-rt{
+        //     right: 2px;
+        //     top: 2px;
+        // }
+
+        // &-ct{
+        //     width: 100%;
+        //     justify-content: center;
+        //     bottom: 2px;
+        // }
+
+        // &-main{
+        //     position: static;
+        //     padding: 0;
+        //     font-size: 20px;
+        // }
     }
 }
 

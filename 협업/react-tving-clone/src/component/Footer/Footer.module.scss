@@ -33,7 +33,7 @@
     .foot_select_wrap{
         display: flex;
         margin-left: auto;
-        
+        > div + div::before{content: '';display: inline-block;width: 2px;height: 20px;background: rgb(163, 163, 163);}
     }
 }
 .copyright_box{

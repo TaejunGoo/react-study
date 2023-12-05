@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './assets/css/reset.scss'
@@ -13,7 +12,6 @@ import Series from './pages/Series'
 import Movie from './pages/Movie'
 import Live from './pages/Live'
 import Paramount from './pages/Paramount'
-
 
 
 function App(){

@@ -49,7 +49,7 @@ const SearchLayer = ()=>{
 
     return(        
         <div className={styles.SearchLayer}>
-            <div className={styles.isLayer}>
+            <div className={`${styles.isLayer} isLayer`}>
                 <label className={styles.search__input} htmlFor="search__input">
                     <input 
                         value={text} 

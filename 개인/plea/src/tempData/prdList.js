@@ -1,0 +1,48 @@
+export const prdList = [
+  {
+    name: '다이아몬드 반지',
+    brand: '데이뷰',
+    altText: '데이뷰 다이아몬드 반지',
+    thumb: process.env.PUBLIC_URL + `assets/images/temp/@prd_white_200x200.jpg`,
+    originPrice: 100000,
+    salePrice: 50000,
+    salePer: 50,
+  },
+  {
+    name: '에메랄드 목걸이',
+    brand: '데이뷰',
+    altText: '데이뷰 에메랄드 목걸이',
+    thumb: process.env.PUBLIC_URL + `assets/images/temp/@prd_285x285_1.jpg`,
+    originPrice: 100000,
+    salePrice: 50000,
+    salePer: 50,
+  },
+  {
+    name: '진주 귀걸이',
+    brand: '데이뷰',
+    altText: '데이뷰 진주 귀걸이',
+    thumb: process.env.PUBLIC_URL + `assets/images/temp/@prd_285x285_2.jpg`,
+    originPrice: 100000,
+    salePrice: 50000,
+    salePer: 50,
+  },
+  {
+    name: '금 목걸이',
+    brand: '데이뷰',
+    altText: '데이뷰 금 목걸이',
+    thumb: process.env.PUBLIC_URL + `assets/images/temp/@prd_285x285_3.jpg`,
+    originPrice: 100000,
+    salePrice: 50000,
+    salePer: 50,
+  },
+  // {
+  //   name: '사파이어 반지',
+  //   brand: '데이뷰',
+  //   altText: '데이뷰 사파이어 반지',
+  //   thumb: process.env.PUBLIC_URL + `assets/images/temp/@prd_285x285_4.jpg`,
+  //   originPrice: 100000,
+  //   salePrice: 50000,
+  //   salePer: 50,
+  // },
+
+]

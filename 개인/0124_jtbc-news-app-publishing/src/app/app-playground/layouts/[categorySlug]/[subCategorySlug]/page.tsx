@@ -1,0 +1,24 @@
+import { notFound } from 'next/navigation'
+import { CategoryName } from '@/app/_components/CategoryName'
+import { Skeleton } from '@/app/_components/Skeleton'
+import { categoryPrefetchQuery } from '@/query/category/categoryPrefetchQuery'
+import { Spacer } from '@/shared/components/demo/Spacer.styled'
+
+type PageProps = {
+	params: { subCategorySlug: string }
+}
+
+export default async function Page({ params }: PageProps) {
+	const { data: category } = await categoryPrefetchQuery({ slug: params.subCategorySlug })
+
+	if (!category) {
+		notFound()
+	}
+
+	return (
+		<Spacer vertical={4}>
+			<CategoryName name={category.name} />
+			<Skeleton slug={params.subCategorySlug} />
+		</Spacer>
+	)
+}

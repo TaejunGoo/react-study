@@ -6,22 +6,28 @@ import styled from '@emotion/styled'
 const ContainerStyled = styled('div')`
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	${({ theme }) => css`
 		${theme.mediaQueries.md} {
 			max-width: 768px;
-			padding: 0 32px;
+			padding-left: 32px;
+			padding-right: 32px;
 		}
 		${theme.mediaQueries.lg} {
 			max-width: 1024px;
-			padding: 0 40px;
+			padding-left: 40px;
+			padding-right: 40px;
 		}
 		${theme.mediaQueries.xl} {
 			max-width: 1280px;
 		}
 	`}
 `
-
-export default function Container({ children }: { children: React.ReactNode }) {
-	return <ContainerStyled>{children}</ContainerStyled>
+interface ContainerProps {
+	children: React.ReactNode
+	className?: string
+}
+export default function Container({ children, className }: ContainerProps) {
+	return <ContainerStyled className={className}>{children}</ContainerStyled>
 }

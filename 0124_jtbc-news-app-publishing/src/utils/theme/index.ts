@@ -107,6 +107,7 @@ export const theme = {
 
 // combine CSS
 export const globalStyle = css`
+	@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
 	html,
 	body,
 	div,
@@ -234,20 +235,22 @@ export const globalStyle = css`
 	html {
 		line-height: 1.5;
 		font-family:
-			ui-sans-serif,
-			system-ui,
+			'Pretendard Variable',
+			Pretendard,
 			-apple-system,
 			BlinkMacSystemFont,
-			'Segoe UI',
+			system-ui,
 			Roboto,
 			'Helvetica Neue',
-			Arial,
-			'Noto Sans',
-			sans-serif,
+			'Segoe UI',
+			'Apple SD Gothic Neo',
+			'Noto Sans KR',
+			'Malgun Gothic',
 			'Apple Color Emoji',
 			'Segoe UI Emoji',
 			'Segoe UI Symbol',
-			'Noto Color Emoji'; /* 4 */
+			sans-serif;
+		font-size: 62.5%;
 	}
 	body {
 		line-height: inherit;
@@ -258,5 +261,17 @@ export const globalStyle = css`
 	}
 	* {
 		box-sizing: border-box;
+	}
+	.a11y {
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0, 0, 0, 0);
+		clip-path: circle(0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		white-space: nowrap;
 	}
 `

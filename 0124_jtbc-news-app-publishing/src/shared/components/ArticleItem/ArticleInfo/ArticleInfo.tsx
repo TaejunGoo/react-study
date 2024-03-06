@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { UseSizeRules, generateResponsiveStyles } from '../generateResponsiveStyles'
+import A11yHidden from '../../common/A11yHidden/A11yHidden'
 
 const sizeList = {
 	lg: css`
@@ -114,9 +115,24 @@ export default function ArticleInfo({
 				<span className="title">{title}</span>
 			</div>
 			<div className="descArea">
-				{view && <div className="view">조회수 {view}</div>}
-				{writer && <div className="writer">작성자 {writer}</div>}
-				{releaseTime && <div className="releaseTime">작성시간 {releaseTime}</div>}
+				{view && (
+					<div className="view">
+						<A11yHidden>조회수</A11yHidden>
+						{view}
+					</div>
+				)}
+				{writer && (
+					<div className="writer">
+						<A11yHidden>작성 기자</A11yHidden>
+						{writer}
+					</div>
+				)}
+				{releaseTime && (
+					<div className="releaseTime">
+						<A11yHidden>작성 시간</A11yHidden>
+						{releaseTime}
+					</div>
+				)}
 			</div>
 		</ArticleInfoLayoutStyled>
 	)

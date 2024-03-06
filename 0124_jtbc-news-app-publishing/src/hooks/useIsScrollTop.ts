@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 
 const useIsScrollTop = () => {
-	const [isScrollTop, setIsScrollTop] = useState(false)
+	const [isScrollTop, setIsScrollTop] = useState(true)
 	useEffect(() => {
-		const top = 1
-		console.log(window.scrollY)
+		const top = 0
 		const getScroll = () => {
-			if (window.scrollY < top) {
+			if (window.scrollY <= top) {
 				setIsScrollTop(true)
 			} else {
 				setIsScrollTop(false)

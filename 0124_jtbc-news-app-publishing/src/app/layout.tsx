@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Providers } from '@/shared/providers'
 import { MSWRunner } from '@/shared/providers/MSWRunner'
-import TestHeader from '@/shared/components/common/Header/Header'
-import TestFooter from '@/shared/components/common/Footer/Footer'
+import TestHeader from '@/shared/components/common/Header'
+import TestFooter from '@/shared/components/common/Footer'
 import Content from '@/shared/components/common/Content/Content'
 import Container from '@/shared/components/common/Container/Container'
 
@@ -52,7 +52,9 @@ export const viewport: Viewport = {
 	themeColor: '#FFFFFF',
 }
 
-type RootRayoutProps = React.PropsWithChildren
+type RootRayoutProps = {
+	children: React.ReactNode
+}
 
 export default function RootLayout({ children }: RootRayoutProps) {
 	// const VERSION = '20231212'

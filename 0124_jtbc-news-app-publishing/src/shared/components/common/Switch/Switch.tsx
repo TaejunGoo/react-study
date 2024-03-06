@@ -12,25 +12,26 @@ const SwitchLayoutStyled = styled('label')`
 const SwitchInputStyled = styled('input')`
 	appearance: none;
 	position: relative;
-	border: 1px solid gray;
 	border-radius: 100px;
-	width: 30px;
-	height: 10px;
+	width: 35px;
+	height: 20px;
+	background-color: antiquewhite;
+	transition: box-shadow 0.1s;
+	box-shadow: 0 0 0 1px lightgray;
 	&::before {
 		content: '';
 		position: absolute;
-		left: 0;
-		top: -3px;
+		left: 2px;
+		top: 2px;
 		width: 16px;
 		height: 16px;
-		border-radius: 50%;
+		border-radius: 100px;
 		background-color: gray;
-		transition: left 250ms linear;
-		border: 1px solid gray;
+		transition: all 0.1s linear;
 	}
 	&:checked::before {
 		background-color: white;
-		left: 20px;
+		left: 17px;
 	}
 	&:checked {
 		background: tomato;
@@ -63,12 +64,18 @@ const SwitchLabelStyled = styled('span')``
 
 interface SwitchProps {
 	label?: string
+	disabled?: boolean
 	defaultChecked?: boolean
 }
-export default function Switch({ label, defaultChecked }: SwitchProps) {
+export default function Switch({ label, disabled = false, defaultChecked }: SwitchProps) {
 	return (
 		<SwitchLayoutStyled>
-			<SwitchInputStyled role="switch" type="checkbox" defaultChecked={defaultChecked} />
+			<SwitchInputStyled
+				role="switch"
+				type="checkbox"
+				disabled={disabled}
+				defaultChecked={defaultChecked}
+			/>
 			<SwitchLabelStyled>{label}</SwitchLabelStyled>
 		</SwitchLayoutStyled>
 	)

@@ -36,6 +36,7 @@ const articleData: ArticleData = {
 
 interface ArticleItemProps {
 	horizontal?: boolean
+	reverse?: boolean
 	thumbWidth?: SizeNumberByMedia
 	infoSize?: UseSizeRules
 	thumbUiSize?: UseSizeRules
@@ -43,13 +44,14 @@ interface ArticleItemProps {
 
 export default function ArticleItem({
 	horizontal = false,
+	reverse = false,
 	thumbWidth,
 	infoSize,
 	thumbUiSize,
 }: ArticleItemProps) {
 	return (
 		<Link href={articleData.link}>
-			<ArticleBase horizontal={horizontal}>
+			<ArticleBase horizontal={horizontal} reverse={reverse}>
 				{articleData.thumbSrc && (
 					<ArticleThumb
 						thumbSrc={articleData.thumbSrc}
